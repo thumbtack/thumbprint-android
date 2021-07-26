@@ -1,5 +1,3 @@
-![Thumbprint Android header](./.github/thumbprint-header.png)
-
 # Thumbprint
 
 Thumbprint is the design system at Thumbtack. Though its primary purpose to support Thumbtack projects, we have open-sourced it for those interested in how we build and manage our documentation and code.
