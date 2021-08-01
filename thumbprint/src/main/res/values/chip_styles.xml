@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Thumbprint.Chip">
+        <item name="android:paddingStart">@dimen/space_3</item>
+        <item name="android:paddingEnd">@dimen/space_3</item>
+        <item name="android:paddingTop">@dimen/space_2</item>
+        <item name="android:paddingBottom">@dimen/space_2</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

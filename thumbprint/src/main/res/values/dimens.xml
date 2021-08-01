@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    The radius for all rounded corners. If you are about to add a different size, think twice about
+    it, talk to your friendly designer and, if really necessary, update this comment
+    -->
+    <dimen name="round_corner_radius">4dp</dimen>
+    <dimen name="round_corner_radius_for_pill">18dp</dimen>
+    <dimen name="round_corner_radius_for_fab">32dp</dimen>
+    <dimen name="horizontal_divider_height">1dp</dimen>
+
+    <!-- Font sizes -->
+    <dimen name="font_smallest">11sp</dimen>
+    <dimen name="font_smaller">12sp</dimen>
+    <dimen name="font_small">13sp</dimen>
+    <dimen name="font_normal">14sp</dimen>
+    <dimen name="font_large">16sp</dimen>
+    <dimen name="font_large_TBD">18sp</dimen>
+    <dimen name="font_larger">20sp</dimen>
+    <dimen name="font_largest">24sp</dimen>
+    <dimen name="font_huge">32sp</dimen>
+    <dimen name="font_huger">34sp</dimen>
+    <dimen name="font_hugest">64sp</dimen>
+
+    <!-- Correct thumbprint font sizes -->
+    <dimen name="title_1">28sp</dimen>
+    <dimen name="title_2">24sp</dimen>
+    <dimen name="title_3">22sp</dimen>
+    <dimen name="title_4">20sp</dimen>
+    <dimen name="title_5">18sp</dimen>
+    <dimen name="title_6">16sp</dimen>
+    <dimen name="title_7">14sp</dimen>
+    <dimen name="title_8">12sp</dimen>
+    <dimen name="body_1">16sp</dimen>
+    <dimen name="body_2">14sp</dimen>
+    <dimen name="body_3">12sp</dimen>
+
+    <!-- Correct thumbprint line heights -->
+    <dimen name="title_1_line_spacing_extra">4sp</dimen>
+    <dimen name="title_2_line_spacing_extra">4sp</dimen>
+    <dimen name="title_3_line_spacing_extra">6sp</dimen>
+    <dimen name="title_4_line_spacing_extra">8sp</dimen>
+    <dimen name="title_5_line_spacing_extra">6sp</dimen>
+    <dimen name="title_6_line_spacing_extra">8sp</dimen>
+    <dimen name="title_7_line_spacing_extra">6sp</dimen>
+    <dimen name="title_8_line_spacing_extra">6sp</dimen>
+    <dimen name="body_1_line_spacing_extra">8sp</dimen>
+    <dimen name="body_2_line_spacing_extra">6sp</dimen>
+    <dimen name="body_3_line_spacing_extra">6sp</dimen>
+
+    <!-- Avatar component font sizes -->
+    <dimen name="font_avatar_extra_small">10sp</dimen>
+    <dimen name="font_avatar_small">16sp</dimen>
+    <dimen name="font_avatar_medium">20sp</dimen>
+    <dimen name="font_avatar_large">24sp</dimen>
+    <dimen name="font_avatar_extra_large">32sp</dimen>
+
+    <dimen name="line_spacing_small">4sp</dimen>
+    <dimen name="line_spacing_normal">6sp</dimen>
+    <dimen name="line_spacing_large">8sp</dimen>
+
+    <!-- Avatar component badge sizes -->
+    <dimen name="entity_avatar_badge_extra_small">12dp</dimen>
+    <dimen name="entity_avatar_badge_small">12dp</dimen>
+    <dimen name="entity_avatar_badge_medium">14dp</dimen>
+    <dimen name="entity_avatar_badge_large">16dp</dimen>
+    <dimen name="entity_avatar_badge_extra_large">24dp</dimen>
+
+    <dimen name="user_avatar_badge_extra_small">12dp</dimen>
+    <dimen name="user_avatar_badge_small">12dp</dimen>
+    <dimen name="user_avatar_badge_medium">14dp</dimen>
+    <dimen name="user_avatar_badge_large">16dp</dimen>
+    <dimen name="user_avatar_badge_extra_large">24dp</dimen>
+
+    <!-- Avatar component badge offsets -->
+
+    <dimen name="entity_avatar_badge_offset_x_extra_small">-2dp</dimen>
+    <dimen name="entity_avatar_badge_offset_x_small">-2dp</dimen>
+    <dimen name="entity_avatar_badge_offset_x_medium">-2dp</dimen>
+    <dimen name="entity_avatar_badge_offset_x_large">-4dp</dimen>
+    <dimen name="entity_avatar_badge_offset_x_extra_large">-4dp</dimen>
+
+    <dimen name="entity_avatar_badge_offset_y_extra_small">2dp</dimen>
+    <dimen name="entity_avatar_badge_offset_y_small">2dp</dimen>
+    <dimen name="entity_avatar_badge_offset_y_medium">2dp</dimen>
+    <dimen name="entity_avatar_badge_offset_y_large">4dp</dimen>
+    <dimen name="entity_avatar_badge_offset_y_extra_large">4dp</dimen>
+
+    <dimen name="user_avatar_badge_offset_x_extra_small">0dp</dimen>
+    <dimen name="user_avatar_badge_offset_x_small">0dp</dimen>
+    <dimen name="user_avatar_badge_offset_x_medium">-2dp</dimen>
+    <dimen name="user_avatar_badge_offset_x_large">-5dp</dimen>
+    <dimen name="user_avatar_badge_offset_x_extra_large">-14dp</dimen>
+
+    <dimen name="user_avatar_badge_offset_y_extra_small">0dp</dimen>
+    <dimen name="user_avatar_badge_offset_y_small">1dp</dimen>
+    <dimen name="user_avatar_badge_offset_y_medium">2dp</dimen>
+    <dimen name="user_avatar_badge_offset_y_large">4dp</dimen>
+    <dimen name="user_avatar_badge_offset_y_extra_large">0dp</dimen>
+
+    <!-- Button -->
+    <!-- Deprecated: All buttons should just use Thumbprint.Button.* instead -->
+    <dimen name="button_height_normal">48dp</dimen>
+
+    <dimen name="close_button_padding">6dp</dimen>
+    <dimen name="close_button_margin">10dp</dimen>
+
+    <!--These are the only thumbprint icons sizes you should be using.    -->
+    <!-- TODO(PUNK-672): in thumbprint, tiny is 14, need to revisit -->
+    <dimen name="icon_size_tiny">12dp</dimen>
+    <dimen name="icon_size_small">18dp</dimen>
+    <dimen name="icon_size_medium">28dp</dimen>
+
+    <!-- TODO: temporarily copied from shared dimens until avatar sizes are standardized -->
+    <dimen name="profile_picture_size">40dp</dimen>
+
+    <dimen name="avatar_size_small">32dp</dimen>
+    <dimen name="avatar_size_medium">48dp</dimen>
+    <dimen name="avatar_size_large">72dp</dimen>
+
+    <dimen name="avatar_overlap">-12dp</dimen>
+
+    <dimen name="unread_indicator_size">8dp</dimen>
+
+    <dimen name="inboxPill_horizontalPadding">12dp</dimen>
+
+    <dimen name="pillBadge_horizontalPadding">12dp</dimen>
+    <dimen name="pillBadge_verticalPadding">2dp</dimen>
+
+    <!-- Spacing -->
+    <!-- Deprecated in favor of the tp_space_* alternatives -->
+    <dimen name="space_1">4dp</dimen>
+    <dimen name="space_2">8dp</dimen>
+    <dimen name="space_3">16dp</dimen>
+    <dimen name="space_4">24dp</dimen>
+    <dimen name="space_5">32dp</dimen>
+    <dimen name="space_6">64dp</dimen>
+
+    <!-- Deprecated Spacings -->
+    <dimen name="spacing_smaller">12dp</dimen>
+    <dimen name="spacing_normal">20dp</dimen>
+    <dimen name="spacing_large">28dp</dimen>
+    <dimen name="spacing_largest">40dp</dimen>
+    <dimen name="spacing_huge">48dp</dimen>
+    <dimen name="spacing_huger">64dp</dimen>
+    <dimen name="spacing_hugest">72dp</dimen>
+
+    <!-- Shadow thickness (used via the elevation attribute) -->
+    <dimen name="shadow_100">1dp</dimen>
+    <dimen name="shadow_200">3dp</dimen>
+    <dimen name="shadow_300">6dp</dimen>
+    <dimen name="shadow_400">10dp</dimen>
+
+    <!-- Stroke width -->
+    <dimen name="stroke_width">1dp</dimen>
+    <dimen name="stroke_double">2dp</dimen>
+
+    <!-- TextArea -->
+    <dimen name="text_area_height">164dp</dimen>
+
+    <!-- sizing needed for loading animation adjustment-->
+    <dimen name="animation_width">120dp</dimen>
+
+    <dimen name="dropdown_height">48dp</dimen>
+
+    <!-- Chip -->
+    <dimen name="chip_corner_radius">99dp</dimen>
+
+    <!-- Fab -->
+    <dimen name="fab_text_height">44dp</dimen>
+    <dimen name="fab_icon_size">56dp</dimen>
+    <dimen name="fab_test_view_padding">8dp</dimen>
+
+    <!-- height for Thumbprint pill -->
+    <dimen name="pill_height">24dp</dimen>
+
+    <dimen name="border">2dp</dimen>
+
+</resources>

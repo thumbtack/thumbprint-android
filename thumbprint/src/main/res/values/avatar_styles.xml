@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="avatarExtraLarge">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">140dp</item>
+        <item name="initials_font_size">@dimen/font_avatar_extra_large</item>
+        <item name="size">extraLarge</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:clipChildren">false</item>
+    </style>
+
+    <style name="avatarLarge">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="initials_font_size">@dimen/font_avatar_large</item>
+        <item name="size">large</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:clipChildren">false</item>
+    </style>
+
+    <style name="avatarMedium">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="initials_font_size">@dimen/font_avatar_medium</item>
+        <item name="size">medium</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:clipChildren">false</item>
+    </style>
+
+    <style name="avatarSmall">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="initials_font_size">@dimen/font_avatar_small</item>
+        <item name="size">small</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:clipChildren">false</item>
+    </style>
+
+    <style name="avatarExtraSmall">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="initials_font_size">@dimen/font_avatar_extra_small</item>
+        <item name="size">extraSmall</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:clipChildren">false</item>
+    </style>
+</resources>

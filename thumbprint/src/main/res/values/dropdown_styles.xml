@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ThumbprintSpinnerInternal">
+        <item name="android:background">@drawable/thumbprint_dropdown_background</item>
+        <item name="android:minHeight">@dimen/dropdown_height</item>
+        <item name="android:overlapAnchor">false</item>
+        <item name="android:paddingStart">@dimen/stroke_width</item>
+        <item name="android:paddingEnd">@dimen/tp_space_6</item>
+    </style>
+
+</resources>

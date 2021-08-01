@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    An Android implementation of (some) of the buttons defined in
+    https://thumbprint.thumbtack.com/ui/tp-ui-element-button/
+    -->
+
+    <style name="Thumbprint.CheckBox" parent="Body2RegularWithLineSpacing">
+        <item name="android:drawablePadding">0dp</item>
+    </style>
+
+    <style name="Thumbprint.CheckBox.Error">
+        <item name="android:buttonTint">@color/red</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+</resources>

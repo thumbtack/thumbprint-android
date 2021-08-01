@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Thumbprint.ShadowCard">
+        <item name="cardCornerRadius">@dimen/round_corner_radius</item>
+        <item name="cardElevation">@dimen/shadow_200</item>
+    </style>
+</resources>
