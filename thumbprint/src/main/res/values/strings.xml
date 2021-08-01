@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="just_now">Just now</string>
+    <string name="minute">m</string>
+    <string name="hour">h</string>
+    <string name="day">d</string>
+    <string name="week">w</string>
+    <string name="month">mo</string>
+    <string name="one_year">1y</string>
+
+    <!-- strings for testing thumbprint components -->
+    <string name="info_banner_text">This is an info banner.</string>
+    <string name="info_link_text">This is an info link.</string>
+    <string name="warning_link_text">This is a warning link.</string>
+    <string name="caution_link_text">This is a caution link.</string>
+    <string name="compound_button_error_utterance">Error. </string>
+    <string name="checkbox_indeterminate_utterance">Indeterminate. </string>
+    <string name="compound_button_checked_utterance">Checked. </string>
+    <string name="compound_button_unchecked_utterance">Not checked. </string>
+</resources>

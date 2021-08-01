@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Thumbprint.Pill">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/pill_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/pillBadge_horizontalPadding</item>
+        <item name="android:paddingEnd">@dimen/pillBadge_horizontalPadding</item>
+        <item name="android:paddingTop">@dimen/pillBadge_verticalPadding</item>
+        <item name="android:paddingBottom">@dimen/pillBadge_verticalPadding</item>
+    </style>
+
+    <style name="Thumbprint.PillImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/space_1</item>
+    </style>
+</resources>

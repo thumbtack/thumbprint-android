@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="state_error" format="boolean" />
+    <attr name="thumbprintFont" format="reference" />
+
+    <!-- These are here so apps can replace these with their own custom icons -->
+    <attr name="infoFilledIcon" format="reference" />
+    <attr name="closeSmallIcon" format="reference" />
+
+    <!-- These are here to support apps that use Calligraphy. -->
+    <attr name="fontPath" format="string" />
+    <attr name="regularCalligraphyFont" format="string" />
+    <attr name="boldCalligraphyFont" format="string" />
+
+    <declare-styleable name="StarRatingView">
+        <attr name="starBackgroundColor" format="color" />
+        <attr name="starFillColor" format="color" />
+        <attr name="starSpacing" format="dimension" />
+        <attr name="is_compact" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AvatarView">
+        <attr name="is_entity" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="AvatarViewBase">
+        <attr name="initials_font_size" format="reference" />
+        <attr name="size" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ThumbprintEntityAvatar" parent="AvatarViewBase" />
+
+    <declare-styleable name="ThumbprintUserAvatar" parent="AvatarViewBase" />
+
+    <declare-styleable name="ThumbprintButtonStyleable" parent="WithDrawables">
+        <!-- buttonText is deprecated. Use `android:text` instead.
+        TODO(DS-941): Remove buttonText in favor of standard `android:text`. -->
+        <attr name="buttonText" format="string" />
+        <attr name="buttonType" format="enum">
+            <enum name="primary" value="0" />
+            <enum name="secondary" value="1" />
+            <enum name="tertiary" value="2" />
+            <enum name="caution" value="3" />
+            <enum name="solid" value="4" />
+        </attr>
+        <attr name="isLoading" format="boolean" />
+        <attr name="isEnabled" format="boolean" />
+        <attr name="isBleed" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ThumbprintPillStyleable">
+        <attr name="pillText" format="string" />
+        <attr name="pillIcon" format="reference" />
+        <attr name="pillColor" format="enum">
+            <enum name="green" value="0"/>
+            <enum name="blue" value="1"/>
+            <enum name="indigo" value="2"/>
+            <enum name="purple" value="3"/>
+            <enum name="red" value="4"/>
+            <enum name="yellow" value="5"/>
+            <enum name="gray" value="6"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="WithDrawables">
+        <attr name="inlineDrawableLeft" format="reference" />
+        <attr name="inlineDrawableTop" format="reference" />
+        <attr name="inlineDrawableBottom" format="reference" />
+        <attr name="inlineDrawableRight" format="reference" />
+        <attr name="inlineDrawablePadding" format="dimension" />
+        <attr name="drawableTintCompat" format="reference|color" />
+        <attr name="tintDrawablesToTextColor" format="boolean" />
+    </declare-styleable>
+
+    <!-- declared so we can set in card_styles -->
+    <declare-styleable name="CardView">
+        <attr name="cardCornerRadius" format="dimension" />
+        <attr name="cardElevation" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ThumbprintCheckBoxStyleable">
+        <attr name="isIndeterminate" format="boolean" />
+        <attr name="state_indeterminate" format="boolean" />
+        <attr name="state_error" />
+    </declare-styleable>
+
+    <declare-styleable name="ThumbprintCompoundButtonStyleable">
+        <attr name="isError" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ThumbprintContainerCompoundButtonStyleable">
+        <attr name="button_layout_width" format="dimension">
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="button_layout_height" format="dimension">
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ThumbprintTextInputWithDrawables">
+        <attr name="focusOnDrawableTap" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ThumbprintBannerStyleable">
+        <attr name="android:text" />
+        <attr name="linkText" format="string" />
+        <attr name="bannerTheme" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ThumbprintDropdown">
+        <attr name="errorText" format="string" />
+        <attr name="state_error" />
+        <attr name="android:entries"  />
+        <attr name="android:overlapAnchor"  />
+    </declare-styleable>
+
+    <declare-styleable name="ThumbprintChipBase">
+        <attr name="isSelected" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ThumbprintTextFab">
+        <attr name="fabStyle" format="enum">
+            <enum name="primary" value="0" />
+            <enum name="secondary" value="1" />
+        </attr>
+        <attr name="icon" format="reference"/>
+    </declare-styleable>
+
+</resources>

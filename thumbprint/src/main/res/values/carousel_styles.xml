@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Styling automatically applied to ThumbprintCarousel; generally should not be used otherwise. -->
+    <style name="Thumbprint.Carousel">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+</resources>

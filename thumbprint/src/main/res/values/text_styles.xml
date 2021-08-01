@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    This file defines the common styles that can be applied to TextViews et al.
+
+    Note that we have old sizes that aren't defined in Thumbprint (Caption1) and old sizes that are
+    different than the Thumbprint sizes (Title1); the new Thumbprint-compliant styles use the prefix
+    "Thumbprint." and should be preferred for new layouts.
+
+    Note also that the old styles ascend in size with their count (e.g. Title5 is the biggest,
+    Title1 is the smallest in the "Title" class), while Thumbprint styles descend in size with their
+    count (e.g. Thumbprint.Title1 is the biggest, Thumbprint.Title5 is the smallest in the "Title"
+    class).
+
+    Finally, note that in order to apply line spacing (via android:lineSpacingExtra) on
+    "LineSpacing"-suffixed styles, you must use style="@style/<style name>", NOT
+    android:textAppearance="@style/<style name>" since android:textAppearance does not include the
+    android:lineSpacingExtra attribute.
+    -->
+
+    <style name="Regular" parent="android:TextAppearance">
+        <item name="fontFamily">?attr/thumbprintFont</item>
+        <item name="fontPath">?attr/regularCalligraphyFont</item>
+    </style>
+
+    <style name="Bold" parent="android:TextAppearance">
+        <item name="fontFamily">?attr/thumbprintFont</item>
+        <item name="fontWeight">700</item>
+        <item name="fontPath">?attr/boldCalligraphyFont</item>
+    </style>
+
+    <!-- BEGIN: Title 5 -->
+    <style name="Title5Regular" parent="Regular">
+        <item name="android:textSize">@dimen/font_hugest</item>
+    </style>
+
+    <style name="Title5Bold" parent="Bold">
+        <item name="android:textSize">@dimen/font_hugest</item>
+    </style>
+
+    <style name="Title5RegularWithLineSpacing" parent="Title5Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+
+    <style name="Title5BoldWithLineSpacing" parent="Title5Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+    <!-- END: Title 5 -->
+
+    <!-- BEGIN: Title 4 -->
+    <style name="Title4Regular" parent="Regular">
+        <item name="android:textSize">@dimen/font_huger</item>
+    </style>
+
+    <style name="Title4Bold" parent="Bold">
+        <item name="android:textSize">@dimen/font_huger</item>
+    </style>
+
+    <style name="Title4RegularWithLineSpacing" parent="Title4Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+
+    <style name="Title4BoldWithLineSpacing" parent="Title4Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+    <!-- END: Title 4 -->
+
+    <!-- BEGIN: Title 3 -->
+    <style name="Title3Regular" parent="Regular">
+        <item name="android:textSize">@dimen/font_huge</item>
+    </style>
+
+    <style name="Title3Bold" parent="Bold">
+        <item name="android:textSize">@dimen/font_huge</item>
+    </style>
+
+    <style name="Title3RegularWithLineSpacing" parent="Title3Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+
+    <style name="Title3BoldWithLineSpacing" parent="Title3Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+    <!-- END: Title 3 -->
+
+    <!-- BEGIN: Title 2 -->
+    <style name="Title2Regular" parent="Regular">
+        <item name="android:textSize">@dimen/font_largest</item>
+    </style>
+
+    <style name="Title2Bold" parent="Bold">
+        <item name="android:textSize">@dimen/font_largest</item>
+    </style>
+
+    <style name="Title2RegularWithLineSpacing" parent="Title2Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+
+    <style name="Title2BoldWithLineSpacing" parent="Title2Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+    <!-- END: Title 2 -->
+
+    <!-- BEGIN: Title 1 -->
+    <style name="Title1Regular" parent="Regular">
+        <item name="android:textSize">@dimen/font_larger</item>
+    </style>
+
+    <style name="Title1Bold" parent="Bold">
+        <item name="android:textSize">@dimen/font_larger</item>
+    </style>
+
+    <style name="Title1RegularWithLineSpacing" parent="Title1Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+
+    <style name="Title1BoldWithLineSpacing" parent="Title1Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+    <!-- END: Title 1 -->
+
+    <!-- BEGIN: Subtitle 1 -->
+    <style name="Subtitle1Regular" parent="Regular">
+        <item name="android:textSize">@dimen/font_large_TBD</item>
+    </style>
+
+    <style name="Subtitle1Bold" parent="Bold">
+        <item name="android:textSize">@dimen/font_large_TBD</item>
+    </style>
+
+    <style name="Subtitle1RegularWithLineSpacing" parent="Subtitle1Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+
+    <style name="Subtitle1BoldWithLineSpacing" parent="Subtitle1Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+    <!-- END: Subtitle 1 -->
+
+    <!-- BEGIN: Body 2 -->
+    <style name="Body2Regular" parent="Regular">
+        <item name="android:textSize">@dimen/font_large</item>
+    </style>
+
+    <style name="Body2Bold" parent="Bold">
+        <item name="android:textSize">@dimen/font_large</item>
+    </style>
+
+    <style name="Body2RegularWithLineSpacing" parent="Body2Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+
+    <style name="Body2RegularWithLargeLineSpacing" parent="Body2Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+
+    <style name="Body2BoldWithLineSpacing" parent="Body2Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+
+    <style name="Body2BoldWithLargeLineSpacing" parent="Body2Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
+    </style>
+    <!-- END: Body 2 -->
+
+    <!-- BEGIN: Body 1 -->
+    <style name="Body1Regular" parent="Regular">
+        <item name="android:textSize">@dimen/font_normal</item>
+    </style>
+
+    <style name="Body1Bold" parent="Bold">
+        <item name="android:textSize">@dimen/font_normal</item>
+    </style>
+
+    <style name="Body1RegularWithLineSpacing" parent="Body1Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+
+    <style name="Body1BoldWithLineSpacing" parent="Body1Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+    <!-- END: Body 1 -->
+
+    <!-- BEGIN: Caption 3 -->
+    <style name="Caption3Regular" parent="Regular">
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+    <style name="Caption3Bold" parent="Bold">
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+    <style name="Caption3RegularWithLineSpacing" parent="Caption3Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+
+    <style name="Caption3BoldWithLineSpacing" parent="Caption3Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+    <!-- END: Caption 3 -->
+
+    <!-- BEGIN: Caption 2 -->
+    <style name="Caption2Regular" parent="Regular">
+        <item name="android:textSize">@dimen/font_smaller</item>
+    </style>
+
+    <style name="Caption2Bold" parent="Bold">
+        <item name="android:textSize">@dimen/font_smaller</item>
+    </style>
+
+    <style name="Caption2RegularWithLineSpacing" parent="Caption2Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+
+    <style name="Caption2BoldWithLineSpacing" parent="Caption2Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+    <!-- END: Caption 2 -->
+
+    <!-- BEGIN: Caption 1 -->
+    <style name="Caption1Regular" parent="Regular">
+        <item name="android:textSize">@dimen/font_smallest</item>
+    </style>
+
+    <style name="Caption1Bold" parent="Bold">
+        <item name="android:textSize">@dimen/font_smallest</item>
+    </style>
+
+    <style name="Caption1RegularWithLineSpacing" parent="Caption1Regular">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+
+    <style name="Caption1BoldWithLineSpacing" parent="Caption1Bold">
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
+    </style>
+    <!-- END: Caption 1 -->
+
+    <!-- BEGIN: Thumbprint Title 1 -->
+    <style name="Thumbprint.Title1Regular" parent="Regular">
+        <item name="android:textSize">@dimen/title_1</item>
+        <item name="android:lineSpacingExtra">@dimen/title_1_line_spacing_extra</item>
+    </style>
+
+    <style name="Thumbprint.Title1Bold" parent="Bold">
+        <item name="android:textSize">@dimen/title_1</item>
+        <item name="android:lineSpacingExtra">@dimen/title_1_line_spacing_extra</item>
+    </style>
+    <!-- END: Thumbprint Title 1 -->
+
+    <!-- BEGIN: Thumbprint Title 2 -->
+    <style name="Thumbprint.Title2Regular" parent="Regular">
+        <item name="android:textSize">@dimen/title_2</item>
+        <item name="android:lineSpacingExtra">@dimen/title_2_line_spacing_extra</item>
+    </style>
+
+    <style name="Thumbprint.Title2Bold" parent="Bold">
+        <item name="android:textSize">@dimen/title_2</item>
+        <item name="android:lineSpacingExtra">@dimen/title_2_line_spacing_extra</item>
+    </style>
+    <!-- END: Thumbprint Title 2 -->
+
+    <!-- BEGIN: Thumbprint Title 3 -->
+    <style name="Thumbprint.Title3Regular" parent="Regular">
+        <item name="android:textSize">@dimen/title_3</item>
+        <item name="android:lineSpacingExtra">@dimen/title_3_line_spacing_extra</item>
+    </style>
+
+    <style name="Thumbprint.Title3Bold" parent="Bold">
+        <item name="android:textSize">@dimen/title_3</item>
+        <item name="android:lineSpacingExtra">@dimen/title_3_line_spacing_extra</item>
+    </style>
+    <!-- END: Thumbprint Title 3 -->
+
+    <!-- BEGIN: Thumbprint Title 4 -->
+    <style name="Thumbprint.Title4Regular" parent="Regular">
+        <item name="android:textSize">@dimen/title_4</item>
+        <item name="android:lineSpacingExtra">@dimen/title_4_line_spacing_extra</item>
+    </style>
+
+    <style name="Thumbprint.Title4Bold" parent="Bold">
+        <item name="android:textSize">@dimen/title_4</item>
+        <item name="android:lineSpacingExtra">@dimen/title_4_line_spacing_extra</item>
+    </style>
+    <!-- END: Thumbprint Title 4 -->
+
+    <!-- BEGIN: Thumbprint Title 5 -->
+    <style name="Thumbprint.Title5Regular" parent="Regular">
+        <item name="android:textSize">@dimen/title_5</item>
+        <item name="android:lineSpacingExtra">@dimen/title_5_line_spacing_extra</item>
+    </style>
+
+    <style name="Thumbprint.Title5Bold" parent="Bold">
+        <item name="android:textSize">@dimen/title_5</item>
+        <item name="android:lineSpacingExtra">@dimen/title_5_line_spacing_extra</item>
+    </style>
+    <!-- END: Thumbprint Title 5 -->
+
+    <!-- BEGIN: Thumbprint Title 6 -->
+    <style name="Thumbprint.Title6Regular" parent="Regular">
+        <item name="android:textSize">@dimen/title_6</item>
+        <item name="android:lineSpacingExtra">@dimen/title_6_line_spacing_extra</item>
+    </style>
+
+    <style name="Thumbprint.Title6Bold" parent="Bold">
+        <item name="android:textSize">@dimen/title_6</item>
+        <item name="android:lineSpacingExtra">@dimen/title_6_line_spacing_extra</item>
+    </style>
+    <!-- END: Thumbprint Title 6 -->
+
+    <!-- BEGIN: Thumbprint Title 7 -->
+    <style name="Thumbprint.Title7Regular" parent="Regular">
+        <item name="android:textSize">@dimen/title_7</item>
+        <item name="android:lineSpacingExtra">@dimen/title_7_line_spacing_extra</item>
+    </style>
+
+    <style name="Thumbprint.Title7Bold" parent="Bold">
+        <item name="android:textSize">@dimen/title_7</item>
+        <item name="android:lineSpacingExtra">@dimen/title_7_line_spacing_extra</item>
+    </style>
+    <!-- END: Thumbprint Title 7 -->
+
+    <!-- BEGIN: Thumbprint Title 8 -->
+    <style name="Thumbprint.Title8Regular" parent="Regular">
+        <item name="android:textSize">@dimen/title_8</item>
+        <item name="android:lineSpacingExtra">@dimen/title_8_line_spacing_extra</item>
+    </style>
+
+    <style name="Thumbprint.Title8Bold" parent="Bold">
+        <item name="android:textSize">@dimen/title_8</item>
+        <item name="android:lineSpacingExtra">@dimen/title_8_line_spacing_extra</item>
+    </style>
+    <!-- END: Thumbprint Title 8 -->
+
+    <!-- BEGIN: Thumbprint Body 1 -->
+    <style name="Thumbprint.Body1Regular" parent="Regular">
+        <item name="android:textSize">@dimen/body_1</item>
+        <item name="android:lineSpacingExtra">@dimen/body_1_line_spacing_extra</item>
+    </style>
+
+    <style name="Thumbprint.Body1Bold" parent="Bold">
+        <item name="android:textSize">@dimen/body_1</item>
+        <item name="android:lineSpacingExtra">@dimen/body_1_line_spacing_extra</item>
+    </style>
+    <!-- END: Thumbprint Body 1 -->
+
+    <!-- BEGIN: Thumbprint Body 2 -->
+    <style name="Thumbprint.Body2Regular" parent="Regular">
+        <item name="android:textSize">@dimen/body_2</item>
+        <item name="android:lineSpacingExtra">@dimen/body_2_line_spacing_extra</item>
+    </style>
+
+    <style name="Thumbprint.Body2Bold" parent="Bold">
+        <item name="android:textSize">@dimen/body_2</item>
+        <item name="android:lineSpacingExtra">@dimen/body_2_line_spacing_extra</item>
+    </style>
+    <!-- END: Thumbprint Body 2 -->
+
+    <!-- BEGIN: Thumbprint Body 3 -->
+    <style name="Thumbprint.Body3Regular" parent="Regular">
+        <item name="android:textSize">@dimen/body_3</item>
+        <item name="android:lineSpacingExtra">@dimen/body_3_line_spacing_extra</item>
+    </style>
+
+    <style name="Thumbprint.Body3Bold" parent="Bold">
+        <item name="android:textSize">@dimen/body_3</item>
+        <item name="android:lineSpacingExtra">@dimen/body_3_line_spacing_extra</item>
+    </style>
+    <!-- END: Thumbprint Body 3 -->
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    An Android implementation of (some) of the buttons defined in
+    https://thumbprint.thumbtack.com/ui/tp-ui-element-button/
+    -->
+
+    <style name="Thumbprint.RadioButton" parent="Thumbprint.Body1Regular" />
+
+    <style name="Thumbprint.RadioButton.Error">
+        <item name="android:buttonTint">@color/red</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+</resources>

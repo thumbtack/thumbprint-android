@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Thumbprint.Fab" />
+
+    <style name="Thumbprint.Fab.Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/fab_text_height</item>
+        <item name="android:paddingStart">@dimen/tp_space_3</item>
+        <item name="android:paddingEnd">@dimen/tp_space_3</item>
+        <item name="android:elevation">@dimen/shadow_400</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/Thumbprint.Title6Bold</item>
+    </style>
+
+</resources>
