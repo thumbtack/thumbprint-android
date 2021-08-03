@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:drawable="@drawable/ic_checkbox_partial_gray"
+        app:state_indeterminate="true"
+        app:state_error="true"
+        android:state_enabled="false"
+        />
+    <item
+        android:drawable="@drawable/ic_checked_gray"
+        android:state_checked="true"
+        android:state_enabled="false"
+        app:state_error="true" />
+    <item
+        android:drawable="@drawable/ic_checkbox_partial_red"
+        app:state_indeterminate="true"
+        app:state_error="true" />
+    <item
+        android:drawable="@drawable/ic_checked_red"
+        android:state_checked="true"
+        app:state_error="true" />
+    <item
+        android:drawable="@drawable/ic_checkbox_partial_gray"
+        android:state_enabled="false"
+        app:state_indeterminate="true" />
+    <item
+        android:drawable="@drawable/ic_checkbox_partial_blue"
+        app:state_indeterminate="true" />
+    <item
+        android:drawable="@drawable/ic_checked_gray"
+        android:state_enabled="false"
+        android:state_checked="true" />
+    <item
+        android:drawable="@drawable/ic_checked_blue"
+        android:state_checked="true" />
+    <item
+        android:state_enabled="false">
+        <inset
+            android:inset="@dimen/space_2">
+            <shape>
+                <size android:height="20dp" android:width="20dp"/>
+                <solid android:color="@color/gray_200" />
+                <corners android:radius="2dp" />
+                <stroke android:width="2dp" android:color="@color/gray_300" />
+            </shape>
+        </inset>
+    </item>
+    <item
+        app:state_error="true">
+        <inset
+            android:inset="@dimen/space_2">
+            <shape>
+                <size android:height="20dp" android:width="20dp"/>
+                <solid android:color="@color/transparent" />
+                <corners android:radius="2dp" />
+                <stroke android:width="2dp" android:color="@color/red" />
+            </shape>
+        </inset>
+    </item>
+    <item>
+        <inset
+            android:inset="@dimen/space_2">
+            <shape>
+                <size android:height="20dp" android:width="20dp"/>
+                <solid android:color="@color/white" />
+                <corners android:radius="2dp" />
+                <stroke android:width="2dp" android:color="@color/gray" />
+            </shape>
+        </inset>
+    </item>
+</selector>

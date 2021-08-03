@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <inset
+            android:inset="@dimen/space_2"
+            android:drawable="@drawable/ic_checkbox_partial_vector_red" />
+    </item>
+</layer-list>
