@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:state_enabled="false">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient android:angle="90" android:endColor="#FAFAFA"
+                        android:startColor="#FAFAFA" android:type="linear" />
+                    <stroke android:width="@dimen/stroke_width" android:color="@color/gray" />
+                    <corners android:radius="@dimen/round_corner_radius" />
+                    <padding android:bottom="@dimen/tp_space_1" android:left="@dimen/tp_space_1"
+                        android:right="@dimen/tp_space_1" android:top="@dimen/tp_space_1" />
+                </shape>
+            </item>
+
+            <item android:color="@color/gray"
+                android:drawable="@drawable/caret_down_gray"
+                android:gravity="center_vertical|right" android:right="@dimen/tp_space_2" />
+        </layer-list>
+    </item>
+
+    <item android:state_selected="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient android:angle="90" android:endColor="#FFFFFF"
+                        android:startColor="#FFFFFF" android:type="linear" />
+                    <stroke android:width="@dimen/stroke_width" android:color="@color/blue" />
+                    <corners android:radius="@dimen/round_corner_radius" />
+                    <padding android:bottom="@dimen/tp_space_1" android:left="@dimen/tp_space_1"
+                        android:right="@dimen/tp_space_1" android:top="@dimen/tp_space_1" />
+                </shape>
+            </item>
+
+            <item android:drawable="@drawable/caret_down"
+                android:gravity="center_vertical|right" android:right="@dimen/tp_space_2" />
+        </layer-list>
+    </item>
+
+    <item app:state_error="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient android:angle="90" android:endColor="#FFFFFF"
+                        android:startColor="#FFFFFF" android:type="linear" />
+                    <stroke android:width="@dimen/stroke_width" android:color="@color/red" />
+                    <corners android:radius="@dimen/round_corner_radius" />
+                    <padding android:bottom="@dimen/tp_space_1" android:left="@dimen/tp_space_1"
+                        android:right="@dimen/tp_space_1" android:top="@dimen/tp_space_1" />
+                </shape>
+            </item>
+
+            <item android:drawable="@drawable/caret_down_red"
+                android:gravity="center_vertical|right" android:right="@dimen/tp_space_2" />
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient android:angle="90" android:endColor="#FFFFFF"
+                        android:startColor="#FFFFFF" android:type="linear" />
+                    <stroke android:width="@dimen/stroke_width" android:color="@color/gray" />
+                    <corners android:radius="@dimen/round_corner_radius" />
+                    <padding android:bottom="@dimen/tp_space_1" android:left="@dimen/tp_space_1"
+                        android:right="@dimen/tp_space_1" android:top="@dimen/tp_space_1" />
+                </shape>
+            </item>
+
+            <item android:drawable="@drawable/caret_down"
+                android:gravity="center_vertical|right" android:right="@dimen/tp_space_2" />
+        </layer-list>
+    </item>
+
+</selector>
