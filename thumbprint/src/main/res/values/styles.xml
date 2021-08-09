@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="TestTheme" parent="Theme.AppCompat.Light.NoActionBar"/>
+    <style name="ThumbprintTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="snackbarStyle">@style/ThumbprintToast</item>
+    </style>
+    <!-- Workaround for margin issue: -->
+    <!-- https://github.com/material-components/material-components-android/issues/1076-->
+    <style name="ThumbprintToast" parent="Widget.MaterialComponents.Snackbar">
+        <item name="android:layout_margin">@null</item>
+        <item name="android:layout_marginLeft">@dimen/tp_space_3</item>
+        <item name="android:layout_marginRight">@dimen/tp_space_3</item>
+        <item name="android:layout_marginBottom">@dimen/tp_space_2</item>
+    </style>
 </resources>
