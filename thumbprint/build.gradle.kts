@@ -15,6 +15,9 @@ object Versions {
     }
 }
 
+group = "com.thumbtack"
+version = "1.0.0"
+
 buildscript {
     repositories {
         jcenter()
@@ -55,6 +58,8 @@ android {
     defaultConfig {
         minSdkVersion(21)
         targetSdkVersion(29)
+        versionCode(1)
+        versionName("1.0.0")
 
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -97,6 +102,21 @@ android {
     testOptions {
         unitTests.isIncludeAndroidResources = true
     }
+
+    compileOptions {
+        sourceCompatibility(JavaVersion.VERSION_1_8)
+        targetCompatibility(JavaVersion.VERSION_1_8)
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+        }
+    }
 }
 
 androidExtensions {
@@ -129,4 +149,16 @@ dependencies {
     testRuntimeOnly("org.junit.vintage:junit-vintage-engine:${Versions.junit}")
     testImplementation("androidx.test:core:${Versions.AndroidX.testCore}")
     testImplementation("org.robolectric:robolectric:${Versions.robolectric}")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.thumbtack"
+                artifactId = "thumbprint"
+                version = "1.0.0"
+            }
+        }
+    }
 }
