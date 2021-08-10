@@ -17,7 +17,7 @@ import org.robolectric.annotation.Config
 class ThumbprintBannerTest {
 
     @Test
-    fun clickLink_notifesListener() {
+    fun clickLink_notifiedListener() {
         var linkClicked = false
         val testLinkText = "some link text"
         val bannerView = ThumbprintBanner(getApplicationContext()).apply {
@@ -25,8 +25,8 @@ class ThumbprintBannerTest {
             linkClickListener = { linkClicked = true }
         }
         // Simulate clicking on link.
-        (bannerView.bannerText.text as? SpannedString)
-            ?.getSpans(0, testLinkText.length, ClickListenerSpan::class.java)
+        SpannedString(bannerView.bannerText.text)
+            .getSpans(0, testLinkText.length, ClickListenerSpan::class.java)
             ?.first()
             ?.onClick(bannerView.bannerText)
 
