@@ -15,8 +15,8 @@ object Versions {
     }
 }
 
-group = "com.thumbtack"
-version = "1.0.0"
+group = "com.github.thumbtack"
+version = "1.1.0"
 
 buildscript {
     repositories {
@@ -58,8 +58,8 @@ android {
     defaultConfig {
         minSdkVersion(21)
         targetSdkVersion(29)
-        versionCode(1)
-        versionName("1.0.0")
+        versionCode(2)
+        versionName("1.1.0")
 
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -155,9 +155,9 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
-                groupId = "com.thumbtack"
+                groupId = "com.github.thumbtack"
                 artifactId = "thumbprint"
-                version = "1.0.0"
+                version = "1.1.0"
             }
         }
     }
