@@ -15,7 +15,7 @@ object Versions {
     }
 }
 
-group = "com.thumbtack.thumbprint"
+group = "com.thumbtack"
 version = "1.0.0"
 
 buildscript {
