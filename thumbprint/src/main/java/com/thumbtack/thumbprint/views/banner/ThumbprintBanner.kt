@@ -53,12 +53,6 @@ class ThumbprintBanner(
 
     init {
         LayoutInflater.from(context).inflate(R.layout.thumbprint_banner, this, true)
-    }
-
-    override fun onFinishInflate() {
-        super.onFinishInflate()
-
-        bannerText.movementMethod = LinkMovementMethod()
         bannerIcon.setImageDrawable(
             getThumbprintIcon(
                 context = context,
@@ -66,6 +60,8 @@ class ThumbprintBanner(
                 iconRef = R.attr.infoFilledIcon
             )
         )
+
+        bannerText.movementMethod = LinkMovementMethod()
 
         ViewCompat.enableAccessibleClickableSpanSupport(bannerText)
 
