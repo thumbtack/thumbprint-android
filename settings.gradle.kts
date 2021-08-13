@@ -1,2 +1,3 @@
 rootProject.name = "Thumbprint"
-include ':thumbprint'
+
+include(":thumbprint")
