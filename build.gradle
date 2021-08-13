@@ -12,13 +12,12 @@ buildscript {
 }
 
 plugins {
-    id("io.gitlab.arturbosch.detekt").version("1.18.0-RC2")
+    id("io.gitlab.arturbosch.detekt").version("1.18.0")
 }
 
 detekt {
-    toolVersion = "1.18.0-RC2"
+    toolVersion = "1.18.0"
     config = files("config/detekt/detekt.yml")
-    buildUponDefaultConfig = true
 }
 
 allprojects {
