@@ -18,16 +18,3 @@ detekt {
     toolVersion = "1.18.0"
     config = files("config/detekt/detekt.yml")
 }
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven { setUrl("https://jitpack.io") }
-        jcenter()
-    }
-}
-
-repositories {
-    mavenCentral()
-}

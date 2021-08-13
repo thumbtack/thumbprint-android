@@ -18,12 +18,6 @@ object Versions {
 group = "com.github.thumbtack"
 version = "1.1.0"
 
-buildscript {
-    repositories {
-        jcenter()
-    }
-}
-
 plugins {
     id("com.android.library")
 
@@ -39,8 +33,9 @@ plugins {
 
 repositories {
     google()
-    jcenter()
     mavenCentral()
+
+    // jitpack required for thumbprint-tokens
     maven { setUrl("https://jitpack.io") }
 }
 
