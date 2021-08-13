@@ -23,18 +23,6 @@ import java.util.Locale
 abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null, isEntity: Boolean) :
     RelativeLayout(context, attrs) {
 
-    companion object {
-        private const val DEFAULT_ATTRIBUTE_INDEX = -1
-
-        enum class Size(val attributeName: String) {
-            EXTRA_SMALL("extraSmall"),
-            SMALL("small"),
-            MEDIUM("medium"),
-            LARGE("large"),
-            EXTRA_LARGE("extraLarge")
-        }
-    }
-
     class InvalidSizeException(message: String) : Exception(message)
 
     private val fontSize: Int
@@ -197,4 +185,16 @@ abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null, isE
      * different than those on Web/iOS.
      */
     abstract fun getOnlineBadgeOffsetY(size: Size): Int
+
+    companion object {
+        private const val DEFAULT_ATTRIBUTE_INDEX = -1
+
+        enum class Size(val attributeName: String) {
+            EXTRA_SMALL("extraSmall"),
+            SMALL("small"),
+            MEDIUM("medium"),
+            LARGE("large"),
+            EXTRA_LARGE("extraLarge")
+        }
+    }
 }

@@ -33,6 +33,8 @@ plugins {
     id("jacoco")
 
     id("maven-publish")
+
+    id("io.gitlab.arturbosch.detekt")
 }
 
 repositories {
