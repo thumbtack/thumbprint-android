@@ -1,4 +1,5 @@
 object Versions {
+    const val jacoco = "0.8.6"
     const val junit = "5.7.1"
     const val junitVintagePlatform = "1.7.0"
     const val material = "1.2.0"
@@ -56,7 +57,7 @@ android {
         minSdkVersion(21)
         targetSdkVersion(29)
         versionCode(2)
-        versionName("1.1.0")
+        versionName(project.version.toString())
 
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -67,15 +68,6 @@ android {
     lintOptions {
         // Allow the continuous build to go on executing after lint errors.
         isAbortOnError = false
-
-        // Some libraries haven't upgraded their linters, and we don't care about that
-        disable("ObsoleteLintCustomCheck")
-
-        // We set the targetSdkVersion, sometimes to an old one
-        disable("OldTargetApi")
-
-        // Continue to use jcenter until all our dependencies are in maven central
-        disable("JcenterRepositoryObsolete")
 
         // Ensure we use methods from AppCompat when available
         error("AppCompatMethod")
@@ -100,10 +92,6 @@ android {
         unitTests.isIncludeAndroidResources = true
     }
 
-    compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_1_8)
-        targetCompatibility(JavaVersion.VERSION_1_8)
-    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -120,7 +108,7 @@ androidExtensions {
     isExperimental = true
 }
 
-extensions.getByType(JacocoPluginExtension::class).toolVersion = "0.8.6"
+extensions.getByType(JacocoPluginExtension::class).toolVersion = Versions.jacoco
 
 tasks.withType(Test::class) {
     useJUnitPlatform()
