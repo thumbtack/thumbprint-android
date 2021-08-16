@@ -55,6 +55,7 @@ complexity:
   LongMethod:
     active: false
     threshold: 60
+    ignoreAnnotated: []
   LongParameterList:
     active: false
     functionThreshold: 6
@@ -143,7 +144,7 @@ exceptions:
     active: true
     excludes: ['**/src/test*/**', '**/src/androidTest/**']
   NotImplementedDeclaration:
-    active: false # we sometimes use these for features in development behind a feature flag
+    active: true
   ObjectExtendsThrowable:
     active: true
   PrintStackTrace:
@@ -198,15 +199,15 @@ formatting:
   autoCorrect: true
   AnnotationOnSeparateLine:
     active: false # we want to allow e.g. @SerializedName to be on the same line, and there doesn't
-      # appear to be any way to exclude that and others (ktlint has 0 docs for this)
-      # moreover, this appears to be extremely buggy and inconsistent as of detekt 1.5.1
-      # i.e. randomly reports many annotations that are on separate lines, but not all
-    # annotations (like @SerializedName) that are on the same line
+                  # appear to be any way to exclude that and others (ktlint has 0 docs for this)
+                  # moreover, this appears to be extremely buggy and inconsistent as of detekt 1.5.1
+                  # i.e. randomly reports many annotations that are on separate lines, but not all
+                  # annotations (like @SerializedName) that are on the same line
   AnnotationSpacing:
     active: false # false-positives when there is a comment on the same line as an annotation, which
-    # we often use to describe @Suppress annotations, etc
+                  # we often use to describe @Suppress annotations, etc
   ArgumentListWrapping:
-    active: false # TODO(dzirbel): broken as of 1.17.1 with lots of false-positives
+    active: true
     indentSize: 4
     maxLineLength: 100
   ChainWrapping:
@@ -225,10 +226,7 @@ formatting:
     autoCorrect: true
     layout: '*,java.**,javax.**,kotlin.**,^'
   Indentation:
-    # TODO(dzirbel): does not allow for double continuation indents from binary operators (e.g. +)
-    # leading to thousands of false-positives. Perhaps we could just use a univeral continuation
-    # indent of 4?
-    active: false
+    active: true
     indentSize: 4
     continuationIndentSize: 4
   MaximumLineLength:
@@ -299,6 +297,9 @@ formatting:
     active: true
 
 naming:
+  BooleanPropertyNaming:
+    active: false
+    allowedPattern: '^(is|has|are)'
   ClassNaming:
     active: true
     classPattern: '[A-Z][a-zA-Z0-9]*'
@@ -384,6 +385,9 @@ performance:
     active: true
 
 potential-bugs:
+  AvoidReferentialEquality:
+    active: true
+    forbiddenTypePatterns: ['kotlin.String']
   CastToNullableType:
     active: true
   Deprecation:
@@ -403,11 +407,12 @@ potential-bugs:
   ExitOutsideMain:
     active: true
   HasPlatformType:
-    active: true # appears to not generate any warnings as of detekt 1.6.0
+    active: true
   IgnoredReturnValue:
     active: true
     restrictToAnnotatedMethods: true
     returnValueAnnotations: ['*.CheckReturnValue', '*.CheckResult']
+    ignoreReturnValueAnnotations: ['*.CanIgnoreReturnValue']
   ImplicitDefaultLocale:
     active: true
   ImplicitUnitReturnType:
@@ -443,7 +448,7 @@ potential-bugs:
   UnreachableCode:
     active: true
   UnsafeCallOnNullableType:
-    active: true # appears to not generate any warnings as of detekt 1.6.0
+    active: true
   UnsafeCast:
     active: true
   UnusedUnaryOperator:
@@ -488,11 +493,11 @@ style:
   ForbiddenImport:
     active: true
     imports:
-      - 'junit.framework.Assert.*' # org.junit.jupiter.api.Assertions should be used instead
-      - 'org.junit.Assert.*' # org.junit.jupiter.api.Assertions should be used instead
-      - 'android.annotation.SuppressLint' # Kotlin's @Suppress should be used instead
-      - 'io.mockk.impl.annotations.*' # directly creaking mocks with mockk() should be used instead
-      - 'com.google.common.truth.Truth' # statically import assertThat instead
+    - 'junit.framework.Assert.*' # org.junit.jupiter.api.Assertions should be used instead
+    - 'org.junit.Assert.*' # org.junit.jupiter.api.Assertions should be used instead
+    - 'android.annotation.SuppressLint' # Kotlin's @Suppress should be used instead
+    - 'io.mockk.impl.annotations.*' # directly creaking mocks with mockk() should be used instead
+    - 'com.google.common.truth.Truth' # statically import assertThat instead
     forbiddenPatterns: ''
   ForbiddenMethodCall:
     active: false
@@ -587,6 +592,7 @@ style:
   ThrowsCount:
     active: false
     max: 2
+    excludeGuardClauses: false
   TrailingWhitespace:
     active: true
   UnderscoresInNumericLiterals:
@@ -624,11 +630,11 @@ style:
   UseCheckOrError:
     active: true
   UseDataClass:
-    active: false # data classes add extra function count footprint
+    active: false
     excludeAnnotatedClasses: []
     allowVars: false
   UseEmptyCounterpart:
-    active: true # TODO(dzirbel): doesn't seem to work as of 1.17.1, we have lots of listOf() usages
+    active: true
   UseIfEmptyOrIfBlank:
     active: true
   UseIfInsteadOfWhen:
