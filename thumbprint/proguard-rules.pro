@@ -1,11 +1,13 @@
 # For more details, see
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
-# Add any project specific keep options here:
+# keep all public classes, otherwise they will be removed by tree-shaking since they may be unused within this library
+-keep public class com.thumbtack.thumbprint.** {
+  # also keep all public methods; this is necessary to keep file-level functions
+  public <methods>;
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+  # also keep the companion object class; this appears to be necessary to reference companion object functions
+  # statically (i.e. MyClass.foo() rather than MyClass.Companion.foo()), although it's not entirely clear why
+  # See: https://jakewharton.com/r8-optimization-staticization/
+  public static ** Companion;
+}

@@ -155,9 +155,30 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
-                groupId = "com.github.thumbtack"
-                artifactId = "thumbprint"
-                version = "1.1.0"
+                groupId = project.group.toString()
+                artifactId = "thumbprint-android"
+                version = project.version.toString()
+
+                from(components["release"])
+
+                pom {
+                    name.set("Thumbprint")
+                    description.set("Assets for building high-quality, consistent user experiences at Thumbtack.")
+                    url.set("https://thumbprint.design/")
+
+                    licenses {
+                        license {
+                            name.set("Apache License 2.0")
+                            url.set("https://github.com/thumbtack/thumbprint-android/blob/main/LICENSE")
+                        }
+                    }
+
+                    scm {
+                        connection.set("scm:git:git://github.com:thumbtack/thumbprint-android.git")
+                        developerConnection.set("scm:git:ssh://github.com:thumbtack/thumbprint-android.git")
+                        url.set("https://github.com/thumbtack/thumbprint-android")
+                    }
+                }
             }
         }
     }
