@@ -17,7 +17,7 @@ object Versions {
 }
 
 group = "com.github.thumbtack"
-version = "1.2.1"
+version = "1.2.2"
 
 plugins {
     id("com.android.library")
@@ -98,7 +98,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
     }
