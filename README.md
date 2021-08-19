@@ -1,3 +1,7 @@
+[![Build Status](https://github.com/thumbtack/thumbprint-android/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/thumbtack/thumbprint-android/actions/workflows/ci.yml)
+[![JitPack Latest Version](https://img.shields.io/jitpack/v/github/thumbtack/thumbprint-android)](https://github.com/thumbtack/thumbprint-android/releases)
+[![License](https://img.shields.io/github/license/thumbtack/thumbprint-android?color=important)](https://github.com/thumbtack/thumbprint-android/blob/main/LICENSE)
+
 ![Thumbprint Android header](./.github/thumbprint-header.png)
 # Thumbprint
 
