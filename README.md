@@ -7,7 +7,7 @@
 
 Thumbprint is the design system at Thumbtack. Though its primary purpose is to support Thumbtack projects, we have open-sourced it for those interested in how we build and manage our documentation and code.
 
-# How To Use
+## How To Use
 
 Thumbprint is published using JitPack. [Follow the instructions here to add it to your project.](https://jitpack.io/#thumbtack/thumbprint-android)
 
