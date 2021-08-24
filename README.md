@@ -29,7 +29,7 @@ Certain assets are from from [FeatherIcons](https://feathericons.com/) ([LICENSE
 
 ## Original Contributors
 
-Below is a list of contributors to this library (in alphabetical order) who contributed to this project before it moved to this seperate open source repository. The Thumbprint team is grateful for all your contributions! GitHub profiles are linked where requested. If you were a previous contributor and don't see your name here, please contact the Thumbprint team to get your name added.
+Below is a list of contributors to this library (in alphabetical order) who contributed to this project before it moved to this separate open source repository. The Thumbprint team is grateful for all your contributions! GitHub profiles are linked where requested. If you were an original contributor and don't see your name here, please contact the Thumbprint team to get your name added.
 
 [Alex Hsieh](https://github.com/alexander-d-hsieh/)\
 [Bianca Gandolfo](https://github.com/bgando)\
