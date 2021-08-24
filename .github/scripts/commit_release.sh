@@ -15,6 +15,6 @@ sed -i "" -E "s/version *= *(["'"'"'])(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9]
 
 # Commit changes and push.
 git add --all
-#git commit -m "Release $1"
-#git push https://$GITHUB_TOKEN@github.com/thumbtack/thumbprint-android.git head:$(git branch --show-current)
-#gh pr create --title "Release $1" --body "" --head $(git branch --show-current)
+git commit -m "Release $1"
+git push https://$GITHUB_TOKEN@github.com/thumbtack/thumbprint-android.git head:$(git branch --show-current)
+gh pr create --title "Release $1" --body "" --head $(git branch --show-current)
