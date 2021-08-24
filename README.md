@@ -1,11 +1,15 @@
 [![Build Status](https://github.com/thumbtack/thumbprint-android/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/thumbtack/thumbprint-android/actions/workflows/ci.yml)
-[![JitPack Latest Version](https://img.shields.io/jitpack/v/github/thumbtack/thumbprint-android)](https://github.com/thumbtack/thumbprint-android/releases)
+[![JitPack Latest Version](https://img.shields.io/jitpack/v/github/thumbtack/thumbprint-android)](https://jitpack.io/#thumbtack/thumbprint-android)
 [![License](https://img.shields.io/github/license/thumbtack/thumbprint-android?color=important)](https://github.com/thumbtack/thumbprint-android/blob/main/LICENSE)
 
 ![Thumbprint Android header](./.github/thumbprint-header.png)
 # Thumbprint
 
 Thumbprint is the design system at Thumbtack. Though its primary purpose is to support Thumbtack projects, we have open-sourced it for those interested in how we build and manage our documentation and code.
+
+# How To Use
+
+Thumbprint is published using JitPack. [Follow the instructions here to add it to your project.](https://jitpack.io/#thumbtack/thumbprint-android)
 
 ## Documentation
 
