@@ -1,0 +1,38 @@
+name: Release Thumbprint
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number for new release (x.x.x)'
+        required: true
+jobs:
+  release:
+    name: Create new Thumbprint release
+    runs-on: macos-10.15
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.RELEASE_PERSONAL_ACCESS_TOKEN }}
+          persist-credentials: false
+
+      - name: ⬆️ Bump version in thumbprint/build.gradle.kts
+        run: sh .github/scripts/commit_release.sh "${{ github.event.inputs.version }}"
+        env:
+          # When the default secrets.GITHUB_TOKEN is used to push the version bump branch,
+          # GitHub will not trigger the `push` event that triggers CI to run on that branch.
+          # To ensure that CI is still triggered, use a separate personal access token with
+          # [public_repo] scope.
+          GITHUB_TOKEN: ${{ secrets.RELEASE_PERSONAL_ACCESS_TOKEN }}
+
+      - name: 🏷 Create release tag
+        run: sh .github/scripts/tag_release.sh "${{ github.event.inputs.version }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_PERSONAL_ACCESS_TOKEN }}
+
+      - name: 🚀 Create GitHub release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: "${{ github.event.inputs.version }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_PERSONAL_ACCESS_TOKEN }}
