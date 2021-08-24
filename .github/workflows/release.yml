@@ -13,7 +13,7 @@ jobs:
       - name: 📥 Checkout
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.RELEASE_PERSONAL_ACCESS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: false
 
       - name: ⬆️ Bump version in thumbprint/build.gradle.kts
@@ -23,16 +23,16 @@ jobs:
           # GitHub will not trigger the `push` event that triggers CI to run on that branch.
           # To ensure that CI is still triggered, use a separate personal access token with
           # [public_repo] scope.
-          GITHUB_TOKEN: ${{ secrets.RELEASE_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🏷 Create release tag
         run: sh .github/scripts/tag_release.sh "${{ github.event.inputs.version }}"
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚀 Create GitHub release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: "${{ github.event.inputs.version }}"
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
