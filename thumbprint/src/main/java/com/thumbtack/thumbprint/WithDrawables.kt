@@ -82,7 +82,7 @@ fun TextView.updateTextWithTintedInlineDrawablesLimited(
         text = updateCharSequenceWithInlineDrawablesLimited(
             withDrawablesAttributes,
             text,
-            context.resources.getDimensionPixelSize(R.dimen.space_1)
+            context.resources.getDimensionPixelSize(R.dimen.tp_space_1)
         )
     }
 }

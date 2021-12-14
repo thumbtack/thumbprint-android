@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingStart="@dimen/space_3"
-    android:paddingEnd="@dimen/space_3"
-    android:paddingTop="@dimen/space_4"
-    android:paddingBottom="@dimen/space_4"
+    android:paddingStart="@dimen/tp_space_3"
+    android:paddingEnd="@dimen/tp_space_3"
+    android:paddingTop="@dimen/tp_space_4"
+    android:paddingBottom="@dimen/tp_space_4"
     android:background="@color/tp_blue_100"
     tools:ignore="Overdraw">
 
@@ -27,7 +27,7 @@
         style="@style/Thumbprint.Title7Regular"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/space_3"
+        android:layout_marginStart="@dimen/tp_space_3"
         android:textColor="@color/tp_blue_600"
         app:layout_constraintStart_toEndOf="@id/bannerIcon"
         app:layout_constraintEnd_toEndOf="parent"
