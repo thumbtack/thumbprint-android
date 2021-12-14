@@ -18,7 +18,7 @@
         android:id="@+id/errorText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_1"
+        android:layout_marginTop="@dimen/tp_space_1"
         android:ellipsize="end"
         android:maxLines="2"
         android:textColor="@color/red"

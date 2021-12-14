@@ -36,7 +36,7 @@
     <item
         android:state_enabled="false">
         <inset
-            android:inset="@dimen/space_2">
+            android:inset="@dimen/tp_space_2">
             <shape>
                 <size android:height="20dp" android:width="20dp"/>
                 <solid android:color="@color/gray_200" />
@@ -48,7 +48,7 @@
     <item
         app:state_error="true">
         <inset
-            android:inset="@dimen/space_2">
+            android:inset="@dimen/tp_space_2">
             <shape>
                 <size android:height="20dp" android:width="20dp"/>
                 <solid android:color="@color/transparent" />
@@ -59,7 +59,7 @@
     </item>
     <item>
         <inset
-            android:inset="@dimen/space_2">
+            android:inset="@dimen/tp_space_2">
             <shape>
                 <size android:height="20dp" android:width="20dp"/>
                 <solid android:color="@color/white" />

@@ -13,7 +13,7 @@ import com.thumbtack.thumbprint.SpaceDecoration
  * - sets the orientation to horizontal
  * - uses a [androidx.recyclerview.widget.LinearLayoutManager]
  * - disables clipping for children within its padding (android:clipToPadding)
- * - adds a [R.dimen.space_2] space between items
+ * - adds a [R.dimen.tp_space_2] space between items
  *
  * Note that [ThumbprintCarousel] automatically applies [R.style.Thumbprint_Carousel]; it does not
  * need to be added as a style in XML.
@@ -31,7 +31,7 @@ class ThumbprintCarousel @JvmOverloads constructor(
             SpaceDecoration(
                 context = context,
                 orientation = HORIZONTAL,
-                dividerSizeRes = R.dimen.space_2
+                dividerSizeRes = R.dimen.tp_space_2
             )
         )
     }

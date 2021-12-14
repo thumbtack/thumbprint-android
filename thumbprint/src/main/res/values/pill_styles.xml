@@ -13,6 +13,6 @@
     <style name="Thumbprint.PillImage">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginEnd">@dimen/space_1</item>
+        <item name="android:layout_marginEnd">@dimen/tp_space_1</item>
     </style>
 </resources>

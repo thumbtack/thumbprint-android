@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="ThumbprintEditTextBase" parent="Widget.AppCompat.EditText">
-        <item name="android:paddingStart">@dimen/space_3</item>
-        <item name="android:paddingEnd">@dimen/space_3</item>
+        <item name="android:paddingStart">@dimen/tp_space_3</item>
+        <item name="android:paddingEnd">@dimen/tp_space_3</item>
         <item name="android:paddingTop">@dimen/spacing_smaller</item>
         <item name="android:paddingBottom">@dimen/spacing_smaller</item>
         <item name="android:textAppearance">@style/Body2RegularWithLargeLineSpacing</item>
@@ -38,6 +38,6 @@
 
     <style name="ThumbprintBasicTextWithDrawables" parent="ThumbprintBasicText">
         <item name="android:drawableStart">@drawable/edit_text_placeholder_icon</item>
-        <item name="android:drawablePadding">@dimen/space_2</item>
+        <item name="android:drawablePadding">@dimen/tp_space_2</item>
     </style>
 </resources>

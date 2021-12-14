@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <inset
-            android:inset="@dimen/space_2"
+            android:inset="@dimen/tp_space_2"
             android:drawable="@drawable/checked_red_vector" />
     </item>
 </layer-list>
