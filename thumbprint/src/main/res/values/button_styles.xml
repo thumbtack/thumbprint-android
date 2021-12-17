@@ -41,7 +41,7 @@
 
     <style name="Thumbprint.Button.SecondaryDeprecated.Bleed">
         <item name="android:background">@drawable/button_secondary_bleed_background</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/tp_black</item>
         <item name="android:layout_width">match_parent</item>
     </style>
 

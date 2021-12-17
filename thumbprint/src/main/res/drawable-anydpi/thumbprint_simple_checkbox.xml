@@ -39,9 +39,9 @@
             android:inset="@dimen/tp_space_2">
             <shape>
                 <size android:height="20dp" android:width="20dp"/>
-                <solid android:color="@color/gray_200" />
+                <solid android:color="@color/tp_gray_200" />
                 <corners android:radius="2dp" />
-                <stroke android:width="2dp" android:color="@color/gray_300" />
+                <stroke android:width="2dp" android:color="@color/tp_gray_300" />
             </shape>
         </inset>
     </item>
@@ -53,7 +53,7 @@
                 <size android:height="20dp" android:width="20dp"/>
                 <solid android:color="@color/transparent" />
                 <corners android:radius="2dp" />
-                <stroke android:width="2dp" android:color="@color/red" />
+                <stroke android:width="2dp" android:color="@color/tp_red" />
             </shape>
         </inset>
     </item>
@@ -62,9 +62,9 @@
             android:inset="@dimen/tp_space_2">
             <shape>
                 <size android:height="20dp" android:width="20dp"/>
-                <solid android:color="@color/white" />
+                <solid android:color="@color/tp_white" />
                 <corners android:radius="2dp" />
-                <stroke android:width="2dp" android:color="@color/gray" />
+                <stroke android:width="2dp" android:color="@color/tp_gray" />
             </shape>
         </inset>
     </item>

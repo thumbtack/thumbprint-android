@@ -4,22 +4,22 @@
          order should be preserved and reflect that used on other platforms. If no initials are
          available, the first array entry is used. -->
     <array name="blank_avatar_background_colors">
-        <item>@color/indigo_100</item>
-        <item>@color/green_100</item>
-        <item>@color/yellow_100</item>
-        <item>@color/red_100</item>
-        <item>@color/purple_100</item>
-        <item>@color/blue_100</item>
+        <item>@color/tp_indigo_100</item>
+        <item>@color/tp_green_100</item>
+        <item>@color/tp_yellow_100</item>
+        <item>@color/tp_red_100</item>
+        <item>@color/tp_purple_100</item>
+        <item>@color/tp_blue_100</item>
     </array>
 
     <!-- The colors in this array must match blank_avatar_background_colors above; that is, text and
          background colors will be taken from the same index of these two arrays. -->
     <array name="blank_avatar_text_colors">
-        <item>@color/indigo_600</item>
-        <item>@color/green_600</item>
-        <item>@color/yellow_600</item>
-        <item>@color/red_600</item>
-        <item>@color/purple_600</item>
-        <item>@color/blue_600</item>
+        <item>@color/tp_indigo_600</item>
+        <item>@color/tp_green_600</item>
+        <item>@color/tp_yellow_600</item>
+        <item>@color/tp_red_600</item>
+        <item>@color/tp_purple_600</item>
+        <item>@color/tp_blue_600</item>
     </array>
 </resources>
