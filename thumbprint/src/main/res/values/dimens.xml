@@ -129,20 +129,11 @@
     <dimen name="pillBadge_verticalPadding">2dp</dimen>
 
     <!-- Spacing -->
-    <!-- Deprecated in favor of the tp_space_* alternatives -->
-    <dimen name="space_1">4dp</dimen>
-    <dimen name="space_2">8dp</dimen>
-    <dimen name="space_3">16dp</dimen>
-    <dimen name="space_4">24dp</dimen>
-    <dimen name="space_5">32dp</dimen>
-    <dimen name="space_6">64dp</dimen>
-
     <!-- Deprecated Spacings -->
     <dimen name="spacing_smaller">12dp</dimen>
     <dimen name="spacing_normal">20dp</dimen>
     <dimen name="spacing_large">28dp</dimen>
     <dimen name="spacing_largest">40dp</dimen>
-    <dimen name="spacing_huge">48dp</dimen>
     <dimen name="spacing_huger">64dp</dimen>
     <dimen name="spacing_hugest">72dp</dimen>
 
