@@ -116,13 +116,13 @@ class ThumbprintPill(
             @ColorRes val backgroundColor: Int,
             @ColorRes val drawableTint: Int
         ) {
-            GREEN(0, R.color.green_100, R.color.green_600),
-            BLUE(1, R.color.blue_100, R.color.blue_600),
-            INDIGO(2, R.color.indigo_100, R.color.indigo_600),
-            PURPLE(3, R.color.purple_100, R.color.purple_600),
-            RED(4, R.color.red_100, R.color.red_600),
-            YELLOW(5, R.color.yellow_100, R.color.yellow_600),
-            GRAY(6, R.color.gray_300, R.color.black);
+            GREEN(0, R.color.tp_green_100, R.color.tp_green_600),
+            BLUE(1, R.color.tp_blue_100, R.color.tp_blue_600),
+            INDIGO(2, R.color.tp_indigo_100, R.color.tp_indigo_600),
+            PURPLE(3, R.color.tp_purple_100, R.color.tp_purple_600),
+            RED(4, R.color.tp_red_100, R.color.tp_red_600),
+            YELLOW(5, R.color.tp_yellow_100, R.color.tp_yellow_600),
+            GRAY(6, R.color.tp_gray_300, R.color.tp_black);
         }
     }
 }

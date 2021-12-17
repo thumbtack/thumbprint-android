@@ -54,7 +54,7 @@ abstract class ThumbprintChipBase(
         // Filter chips have the same text color regardless of state, so set that here instead of in
         // updateState()
         if (chipType == ThumbprintChipType.FILTER) {
-            setTextColor(ContextCompat.getColor(context, R.color.blue))
+            setTextColor(ContextCompat.getColor(context, R.color.tp_blue))
         }
         context.theme.obtainStyledAttributes(
             attrs,
@@ -80,14 +80,14 @@ abstract class ThumbprintChipBase(
                     context,
                     R.drawable.chip_toggle_selected
                 )
-                setTextColor(ContextCompat.getColor(context, R.color.white))
+                setTextColor(ContextCompat.getColor(context, R.color.tp_white))
             }
             chipType == ThumbprintChipType.TOGGLE && !isSelected -> {
                 background = ContextCompat.getDrawable(
                     context,
                     R.drawable.chip_toggle_unselected
                 )
-                setTextColor(ContextCompat.getColor(context, R.color.blue))
+                setTextColor(ContextCompat.getColor(context, R.color.tp_blue))
             }
             chipType == ThumbprintChipType.FILTER && isSelected -> {
                 background = ContextCompat.getDrawable(

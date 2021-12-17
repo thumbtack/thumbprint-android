@@ -14,7 +14,7 @@ class ThumbprintIconFab constructor(
 
     init {
         imageTintList =
-            ColorStateList.valueOf(ContextCompat.getColor(context, R.color.white))
+            ColorStateList.valueOf(ContextCompat.getColor(context, R.color.tp_white))
         setBackgroundResource(R.drawable.icon_fab_background)
         elevation = resources.getDimension(R.dimen.shadow_400)
     }

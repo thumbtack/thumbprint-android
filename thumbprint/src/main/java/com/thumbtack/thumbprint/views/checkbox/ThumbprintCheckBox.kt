@@ -31,7 +31,7 @@ class ThumbprintCheckBox(context: Context, attrs: AttributeSet? = null) :
             try {
                 errorTextColor = getColor(
                     errorStyleAttributes.indexOf(android.R.attr.textColor),
-                    ContextCompat.getColor(context, R.color.red)
+                    ContextCompat.getColor(context, R.color.tp_red)
                 )
             } finally {
                 recycle()
@@ -202,7 +202,7 @@ class ThumbprintCheckBox(context: Context, attrs: AttributeSet? = null) :
                     setTextColor(
                         getColor(
                             textAttributes.indexOf(android.R.attr.textColor),
-                            ContextCompat.getColor(context, R.color.black)
+                            ContextCompat.getColor(context, R.color.tp_black)
                         )
                     )
                 }
