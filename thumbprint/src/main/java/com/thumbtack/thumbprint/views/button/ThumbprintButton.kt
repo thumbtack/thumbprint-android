@@ -137,7 +137,7 @@ class ThumbprintButton @JvmOverloads constructor(
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
             stateListAnimator = null // Get rid of shadow effects.
         }
-        TextViewCompat.setTextAppearance(this, R.style.Body2Bold)
+        TextViewCompat.setTextAppearance(this, R.style.Thumbprint_Title6Bold)
         typeface = getThumbprintFont(context, typeface, BOLD)
 
         setButtonStyle()

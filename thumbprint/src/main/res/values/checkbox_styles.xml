@@ -5,7 +5,7 @@
     https://thumbprint.thumbtack.com/ui/tp-ui-element-button/
     -->
 
-    <style name="Thumbprint.CheckBox" parent="Body2RegularWithLineSpacing">
+    <style name="Thumbprint.CheckBox" parent="Thumbprint.Body1Regular">
         <item name="android:drawablePadding">0dp</item>
     </style>
 
