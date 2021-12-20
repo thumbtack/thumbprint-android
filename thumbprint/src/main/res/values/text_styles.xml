@@ -84,104 +84,6 @@
     </style>
     <!-- END: Title 3 -->
 
-    <!-- BEGIN: Title 2 -->
-    <style name="Title2Regular" parent="Regular">
-        <item name="android:textSize">@dimen/font_largest</item>
-    </style>
-
-    <style name="Title2Bold" parent="Bold">
-        <item name="android:textSize">@dimen/font_largest</item>
-    </style>
-
-    <style name="Title2RegularWithLineSpacing" parent="Title2Regular">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
-    </style>
-
-    <style name="Title2BoldWithLineSpacing" parent="Title2Bold">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
-    </style>
-    <!-- END: Title 2 -->
-
-    <!-- BEGIN: Title 1 -->
-    <style name="Title1Regular" parent="Regular">
-        <item name="android:textSize">@dimen/font_larger</item>
-    </style>
-
-    <style name="Title1Bold" parent="Bold">
-        <item name="android:textSize">@dimen/font_larger</item>
-    </style>
-
-    <style name="Title1RegularWithLineSpacing" parent="Title1Regular">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
-    </style>
-
-    <style name="Title1BoldWithLineSpacing" parent="Title1Bold">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
-    </style>
-    <!-- END: Title 1 -->
-
-    <!-- BEGIN: Subtitle 1 -->
-    <style name="Subtitle1Regular" parent="Regular">
-        <item name="android:textSize">@dimen/font_large_TBD</item>
-    </style>
-
-    <style name="Subtitle1Bold" parent="Bold">
-        <item name="android:textSize">@dimen/font_large_TBD</item>
-    </style>
-
-    <style name="Subtitle1RegularWithLineSpacing" parent="Subtitle1Regular">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
-    </style>
-
-    <style name="Subtitle1BoldWithLineSpacing" parent="Subtitle1Bold">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
-    </style>
-    <!-- END: Subtitle 1 -->
-
-    <!-- BEGIN: Body 2 -->
-    <style name="Body2Regular" parent="Regular">
-        <item name="android:textSize">@dimen/font_large</item>
-    </style>
-
-    <style name="Body2Bold" parent="Bold">
-        <item name="android:textSize">@dimen/font_large</item>
-    </style>
-
-    <style name="Body2RegularWithLineSpacing" parent="Body2Regular">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
-    </style>
-
-    <style name="Body2RegularWithLargeLineSpacing" parent="Body2Regular">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
-    </style>
-
-    <style name="Body2BoldWithLineSpacing" parent="Body2Bold">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
-    </style>
-
-    <style name="Body2BoldWithLargeLineSpacing" parent="Body2Bold">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_large</item>
-    </style>
-    <!-- END: Body 2 -->
-
-    <!-- BEGIN: Body 1 -->
-    <style name="Body1Regular" parent="Regular">
-        <item name="android:textSize">@dimen/font_normal</item>
-    </style>
-
-    <style name="Body1Bold" parent="Bold">
-        <item name="android:textSize">@dimen/font_normal</item>
-    </style>
-
-    <style name="Body1RegularWithLineSpacing" parent="Body1Regular">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
-    </style>
-
-    <style name="Body1BoldWithLineSpacing" parent="Body1Bold">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
-    </style>
-    <!-- END: Body 1 -->
-
     <!-- BEGIN: Caption 3 -->
     <style name="Caption3Regular" parent="Regular">
         <item name="android:textSize">@dimen/font_small</item>
@@ -199,24 +101,6 @@
         <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
     </style>
     <!-- END: Caption 3 -->
-
-    <!-- BEGIN: Caption 2 -->
-    <style name="Caption2Regular" parent="Regular">
-        <item name="android:textSize">@dimen/font_smaller</item>
-    </style>
-
-    <style name="Caption2Bold" parent="Bold">
-        <item name="android:textSize">@dimen/font_smaller</item>
-    </style>
-
-    <style name="Caption2RegularWithLineSpacing" parent="Caption2Regular">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
-    </style>
-
-    <style name="Caption2BoldWithLineSpacing" parent="Caption2Bold">
-        <item name="android:lineSpacingExtra">@dimen/line_spacing_normal</item>
-    </style>
-    <!-- END: Caption 2 -->
 
     <!-- BEGIN: Caption 1 -->
     <style name="Caption1Regular" parent="Regular">

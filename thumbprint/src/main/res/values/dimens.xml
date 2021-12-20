@@ -12,13 +12,7 @@
 
     <!-- Font sizes -->
     <dimen name="font_smallest">11sp</dimen>
-    <dimen name="font_smaller">12sp</dimen>
     <dimen name="font_small">13sp</dimen>
-    <dimen name="font_normal">14sp</dimen>
-    <dimen name="font_large">16sp</dimen>
-    <dimen name="font_large_TBD">18sp</dimen>
-    <dimen name="font_larger">20sp</dimen>
-    <dimen name="font_largest">24sp</dimen>
     <dimen name="font_huge">32sp</dimen>
     <dimen name="font_huger">34sp</dimen>
     <dimen name="font_hugest">64sp</dimen>
@@ -56,7 +50,6 @@
     <dimen name="font_avatar_large">24sp</dimen>
     <dimen name="font_avatar_extra_large">32sp</dimen>
 
-    <dimen name="line_spacing_small">4sp</dimen>
     <dimen name="line_spacing_normal">6sp</dimen>
     <dimen name="line_spacing_large">8sp</dimen>
 
