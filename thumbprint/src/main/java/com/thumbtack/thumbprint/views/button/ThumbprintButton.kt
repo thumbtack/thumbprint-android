@@ -44,11 +44,11 @@ class ThumbprintButton @JvmOverloads constructor(
         val textColorStateListId: Int,
         val loadingAnimationColor: Int
     ) {
-        PRIMARY(0, R.color.tp_button_primary_text_color_selector, R.color.tp_white),
-        SECONDARY(1, R.color.tp_button_secondary_text_color_selector, R.color.tp_blue),
-        TERTIARY(2, R.color.tp_button_tertiary_text_color_selector, R.color.tp_black_300),
-        CAUTION(3, R.color.tp_button_caution_text_color_selector, R.color.tp_red),
-        SOLID(4, R.color.tp_button_solid_text_color_selector, R.color.tp_black);
+        PRIMARY(0, R.color.button_primary_text_color_selector, R.color.tp_white),
+        SECONDARY(1, R.color.button_secondary_text_color_selector, R.color.tp_blue),
+        TERTIARY(2, R.color.button_tertiary_text_color_selector, R.color.tp_black_300),
+        CAUTION(3, R.color.button_caution_text_color_selector, R.color.tp_red),
+        SOLID(4, R.color.button_solid_text_color_selector, R.color.tp_black);
     }
 
     private val thumbprintButtonAttributes = ThumbprintButtonAttributes(context, attrs)
