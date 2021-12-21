@@ -27,12 +27,12 @@ class ThumbprintTextFab(
         PRIMARY(
             0,
             R.drawable.text_fab_primary_background,
-            R.color.white
+            R.color.tp_white
         ),
         SECONDARY(
             1,
             R.drawable.text_fab_secondary_background,
-            R.color.blue
+            R.color.tp_blue
         );
     }
 

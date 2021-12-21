@@ -37,14 +37,14 @@ class ThumbprintRadioButton(context: Context, attrs: AttributeSet? = null) :
                             ColorStateList.valueOf(
                                 getColor(
                                     errorStyleAttributes.indexOf(android.R.attr.buttonTint),
-                                    ContextCompat.getColor(context, R.color.red)
+                                    ContextCompat.getColor(context, R.color.tp_red)
                                 )
                             )
                         )
                     }
                 errorTextColor = getColor(
                     errorStyleAttributes.indexOf(android.R.attr.textColor),
-                    ContextCompat.getColor(context, R.color.red)
+                    ContextCompat.getColor(context, R.color.tp_red)
                 )
             } finally {
                 recycle()
@@ -141,7 +141,7 @@ class ThumbprintRadioButton(context: Context, attrs: AttributeSet? = null) :
                     setTextColor(
                         getColor(
                             textAttributes.indexOf(android.R.attr.textColor),
-                            ContextCompat.getColor(context, R.color.black)
+                            ContextCompat.getColor(context, R.color.tp_black)
                         )
                     )
                 }

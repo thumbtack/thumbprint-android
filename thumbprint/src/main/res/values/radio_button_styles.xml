@@ -8,7 +8,7 @@
     <style name="Thumbprint.RadioButton" parent="Thumbprint.Body1Regular" />
 
     <style name="Thumbprint.RadioButton.Error">
-        <item name="android:buttonTint">@color/red</item>
-        <item name="android:textColor">@color/red</item>
+        <item name="android:buttonTint">@color/tp_red</item>
+        <item name="android:textColor">@color/tp_red</item>
     </style>
 </resources>

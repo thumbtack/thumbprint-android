@@ -26,7 +26,7 @@ class ThumbprintClearableTextInput(
             iconRef = R.attr.closeSmallIcon
         )
         setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null)
-        compoundDrawables[DRAWABLE_END].setTint(ContextCompat.getColor(context, R.color.gray))
+        compoundDrawables[DRAWABLE_END].setTint(ContextCompat.getColor(context, R.color.tp_gray))
     }
 
     override fun handleDrawableEndTap() {

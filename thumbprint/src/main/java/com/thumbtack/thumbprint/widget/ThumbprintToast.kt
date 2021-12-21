@@ -183,7 +183,7 @@ class ThumbprintToast {
             snackbar.setActionTextColor(
                 ContextCompat.getColor(
                     context,
-                    R.color.blue
+                    R.color.tp_blue
                 )
             )
         }

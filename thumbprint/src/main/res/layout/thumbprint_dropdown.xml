@@ -21,7 +21,7 @@
         android:layout_marginTop="@dimen/tp_space_1"
         android:ellipsize="end"
         android:maxLines="2"
-        android:textColor="@color/red"
+        android:textColor="@color/tp_red"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/spinner"
         app:layout_constraintTop_toBottomOf="@id/spinner"

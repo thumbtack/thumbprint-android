@@ -8,4 +8,4 @@
     android:singleLine="true"
     android:textAlignment="inherit"
     android:textAppearance="@style/Thumbprint.Body1Regular"
-    android:textColor="@color/red" />
+    android:textColor="@color/tp_red" />

@@ -8,14 +8,14 @@
                 <shape android:shape="rectangle">
                     <gradient android:angle="90" android:endColor="#FAFAFA"
                         android:startColor="#FAFAFA" android:type="linear" />
-                    <stroke android:width="@dimen/stroke_width" android:color="@color/gray" />
+                    <stroke android:width="@dimen/stroke_width" android:color="@color/tp_gray" />
                     <corners android:radius="@dimen/round_corner_radius" />
                     <padding android:bottom="@dimen/tp_space_1" android:left="@dimen/tp_space_1"
                         android:right="@dimen/tp_space_1" android:top="@dimen/tp_space_1" />
                 </shape>
             </item>
 
-            <item android:color="@color/gray"
+            <item android:color="@color/tp_gray"
                 android:drawable="@drawable/caret_down_gray"
                 android:gravity="center_vertical|right" android:right="@dimen/tp_space_2" />
         </layer-list>
@@ -27,7 +27,7 @@
                 <shape android:shape="rectangle">
                     <gradient android:angle="90" android:endColor="#FFFFFF"
                         android:startColor="#FFFFFF" android:type="linear" />
-                    <stroke android:width="@dimen/stroke_width" android:color="@color/blue" />
+                    <stroke android:width="@dimen/stroke_width" android:color="@color/tp_blue" />
                     <corners android:radius="@dimen/round_corner_radius" />
                     <padding android:bottom="@dimen/tp_space_1" android:left="@dimen/tp_space_1"
                         android:right="@dimen/tp_space_1" android:top="@dimen/tp_space_1" />
@@ -45,7 +45,7 @@
                 <shape android:shape="rectangle">
                     <gradient android:angle="90" android:endColor="#FFFFFF"
                         android:startColor="#FFFFFF" android:type="linear" />
-                    <stroke android:width="@dimen/stroke_width" android:color="@color/red" />
+                    <stroke android:width="@dimen/stroke_width" android:color="@color/tp_red" />
                     <corners android:radius="@dimen/round_corner_radius" />
                     <padding android:bottom="@dimen/tp_space_1" android:left="@dimen/tp_space_1"
                         android:right="@dimen/tp_space_1" android:top="@dimen/tp_space_1" />
@@ -63,7 +63,7 @@
                 <shape android:shape="rectangle">
                     <gradient android:angle="90" android:endColor="#FFFFFF"
                         android:startColor="#FFFFFF" android:type="linear" />
-                    <stroke android:width="@dimen/stroke_width" android:color="@color/gray" />
+                    <stroke android:width="@dimen/stroke_width" android:color="@color/tp_gray" />
                     <corners android:radius="@dimen/round_corner_radius" />
                     <padding android:bottom="@dimen/tp_space_1" android:left="@dimen/tp_space_1"
                         android:right="@dimen/tp_space_1" android:top="@dimen/tp_space_1" />

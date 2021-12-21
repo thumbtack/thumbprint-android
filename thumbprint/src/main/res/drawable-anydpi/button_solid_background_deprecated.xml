@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="@color/gray_300">
+    android:color="@color/tp_gray_300">
     <item>
         <shape>
             <solid android:color="@color/button_solid_background_selector_deprecated" />

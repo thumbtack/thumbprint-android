@@ -106,8 +106,8 @@ abstract class ThumbprintEditTextBase(
                     context,
                     R.drawable.edit_text_border_default
                 )
-                setTextColor(ContextCompat.getColor(context, R.color.black_300))
-                setHintTextColor(ContextCompat.getColor(context, R.color.black_300))
+                setTextColor(ContextCompat.getColor(context, R.color.tp_black_300))
+                setHintTextColor(ContextCompat.getColor(context, R.color.tp_black_300))
             }
 
             STATE.DISABLED -> {
@@ -115,8 +115,8 @@ abstract class ThumbprintEditTextBase(
                     context,
                     R.drawable.edit_text_border_disabled
                 )
-                setTextColor(ContextCompat.getColor(context, R.color.gray))
-                setHintTextColor(ContextCompat.getColor(context, R.color.gray))
+                setTextColor(ContextCompat.getColor(context, R.color.tp_gray))
+                setHintTextColor(ContextCompat.getColor(context, R.color.tp_gray))
             }
 
             STATE.ERROR -> {
@@ -124,8 +124,8 @@ abstract class ThumbprintEditTextBase(
                     context,
                     R.drawable.edit_text_border_error
                 )
-                setTextColor(ContextCompat.getColor(context, R.color.red))
-                setHintTextColor(ContextCompat.getColor(context, R.color.red))
+                setTextColor(ContextCompat.getColor(context, R.color.tp_red))
+                setHintTextColor(ContextCompat.getColor(context, R.color.tp_red))
             }
 
             STATE.SELECTED_AND_EMPTY -> {
@@ -133,7 +133,7 @@ abstract class ThumbprintEditTextBase(
                     context,
                     R.drawable.edit_text_border_selected
                 )
-                setHintTextColor(ContextCompat.getColor(context, R.color.black_300))
+                setHintTextColor(ContextCompat.getColor(context, R.color.tp_black_300))
             }
 
             STATE.SELECTED_AND_FILLED -> {
@@ -141,7 +141,7 @@ abstract class ThumbprintEditTextBase(
                     context,
                     R.drawable.edit_text_border_selected
                 )
-                setTextColor(ContextCompat.getColor(context, R.color.black))
+                setTextColor(ContextCompat.getColor(context, R.color.tp_black))
             }
 
             STATE.UNSELECTED_AND_FILLED -> {
@@ -149,7 +149,7 @@ abstract class ThumbprintEditTextBase(
                     context,
                     R.drawable.edit_text_border_default
                 )
-                setTextColor(ContextCompat.getColor(context, R.color.black))
+                setTextColor(ContextCompat.getColor(context, R.color.tp_black))
             }
         }
 
