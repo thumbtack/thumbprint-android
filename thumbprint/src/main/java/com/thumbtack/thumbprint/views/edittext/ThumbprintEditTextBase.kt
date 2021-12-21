@@ -34,6 +34,8 @@ abstract class ThumbprintEditTextBase(
 
     private var errorValidator: ((CharSequence?) -> Boolean)? = null
 
+    @Deprecated("Use hasErrorIf instead")
+    // TODO: #43 Privatize hasError
     var hasError: Boolean = false
         set(value) {
             if (value && this.isDisabled) {
