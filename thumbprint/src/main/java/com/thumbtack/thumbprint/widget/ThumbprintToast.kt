@@ -170,7 +170,7 @@ class ThumbprintToast {
     private fun setTextWithStyle(snackbar: Snackbar, context: Context) {
         val snackbarTextView = snackbar.view.findViewById<TextView>(R.id.snackbar_text)
         snackbarTextView?.let {
-            TextViewCompat.setTextAppearance(it, R.style.Body1Regular)
+            TextViewCompat.setTextAppearance(it, R.style.Thumbprint_Body2Regular)
         }
         actionText?.let {
             snackbar.setAction(it.toString(context), actionListener)
@@ -178,7 +178,7 @@ class ThumbprintToast {
                 snackbar.view.findViewById<TextView>(R.id.snackbar_action)
             snackbarActionTextView?.let {
                 it.isAllCaps = false
-                TextViewCompat.setTextAppearance(it, R.style.Body1Regular)
+                TextViewCompat.setTextAppearance(it, R.style.Thumbprint_Body2Regular)
             }
             snackbar.setActionTextColor(
                 ContextCompat.getColor(

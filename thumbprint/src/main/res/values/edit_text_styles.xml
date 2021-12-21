@@ -5,7 +5,7 @@
         <item name="android:paddingEnd">@dimen/tp_space_3</item>
         <item name="android:paddingTop">@dimen/spacing_smaller</item>
         <item name="android:paddingBottom">@dimen/spacing_smaller</item>
-        <item name="android:textAppearance">@style/Body2RegularWithLargeLineSpacing</item>
+        <item name="android:textAppearance">@style/Thumbprint.Body1Regular</item>
         <item name="android:colorAccent">@color/tp_blue</item>
         <item name="android:textColor">@color/tp_black</item>
         <item name="android:textColorHint">@color/tp_black_300</item>
