@@ -67,15 +67,12 @@ abstract class ThumbprintEditTextBase(
                 ) {
                 }
 
-                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                    hasError = if (errorValidator != null) {
-                        errorValidator?.invoke(s) == true
-                    } else {
-                        hasError
-                    }
-                }
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
 
                 override fun afterTextChanged(s: Editable?) {
+                    if (errorValidator != null) {
+                        hasError = errorValidator?.invoke(s) == true
+                    }
                     updateAndApplyState()
                 }
             }
