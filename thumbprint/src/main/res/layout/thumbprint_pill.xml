@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:src="@drawable/phone_call__small"
         tools:visibility="visible"
-        tools:tint="@color/green_600"/>
+        tools:tint="@color/tp_green_600"/>
 
     <TextView
         android:id="@+id/pillText"
@@ -27,7 +27,7 @@
         android:importantForAccessibility="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textColor="@color/green_600"
+        tools:textColor="@color/tp_green_600"
         tools:text="Green" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

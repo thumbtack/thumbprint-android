@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="@color/gray_300">
+    android:color="@color/tp_gray_300">
     <item>
         <shape>
             <stroke
                 android:width="@dimen/stroke_double"
                 android:color="@color/button_secondary_border_color_selector" />
-            <solid android:color="@color/white" />
+            <solid android:color="@color/tp_white" />
             <corners android:radius="@dimen/round_corner_radius_for_fab" />
         </shape>
     </item>

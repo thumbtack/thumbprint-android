@@ -10,7 +10,7 @@
     </style>
 
     <style name="Thumbprint.CheckBox.Error">
-        <item name="android:buttonTint">@color/red</item>
-        <item name="android:textColor">@color/red</item>
+        <item name="android:buttonTint">@color/tp_red</item>
+        <item name="android:textColor">@color/tp_red</item>
     </style>
 </resources>
