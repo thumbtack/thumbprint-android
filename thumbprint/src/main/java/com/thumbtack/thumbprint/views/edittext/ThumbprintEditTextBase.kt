@@ -32,6 +32,10 @@ abstract class ThumbprintEditTextBase(
         UNSELECTED_AND_FILLED
     }
 
+    private var errorValidator: ((CharSequence?) -> Boolean)? = null
+
+    @Deprecated("Use hasErrorIf instead")
+    // TODO: #43 Privatize hasError
     var hasError: Boolean = false
         set(value) {
             if (value && this.isDisabled) {
@@ -68,6 +72,9 @@ abstract class ThumbprintEditTextBase(
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
 
                 override fun afterTextChanged(s: Editable?) {
+                    if (errorValidator != null) {
+                        hasError = errorValidator?.invoke(s) == true
+                    }
                     updateAndApplyState()
                 }
             }
@@ -166,8 +173,8 @@ abstract class ThumbprintEditTextBase(
         updateAndApplyState()
     }
 
-    fun hasErrorIf(condition: (() -> Boolean)) {
-        hasError = condition()
+    fun hasErrorIf(condition: ((CharSequence?) -> Boolean)) {
+        errorValidator = condition
     }
 
     fun isDisabledIf(condition: (() -> Boolean)) {
