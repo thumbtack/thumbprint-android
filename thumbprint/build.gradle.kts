@@ -1,3 +1,6 @@
+// the default version name, used when publishing to the local maven repository
+val localVersionName = "local"
+
 object Versions {
     const val jacoco = "0.8.6"
     const val junit = "5.7.1"
@@ -137,12 +140,17 @@ dependencies {
 }
 
 afterEvaluate {
+    val taskNames = this.gradle.startParameter.taskNames
     publishing {
         publications {
             create<MavenPublication>("release") {
                 groupId = project.group.toString()
                 artifactId = "thumbprint-android"
-                version = project.version.toString()
+                version = if (taskNames.any { name -> name.contains("MavenLocal") }) {
+                    localVersionName
+                } else {
+                    project.version.toString()
+                }
 
                 from(components["release"])
 
