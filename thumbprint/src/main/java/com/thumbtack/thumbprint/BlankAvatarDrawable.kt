@@ -105,11 +105,11 @@ internal class BlankAvatarDrawable(
     }
 
     private fun setColorsFromInitials(initials: String?) {
-        if (initials == null) {
+        val hash = initials?.firstOrNull()?.toInt()
+        if (hash == null) {
             backgroundColor = ContextCompat.getColor(context, R.color.tp_gray_200)
             textColor = ContextCompat.getColor(context, R.color.tp_black)
         } else {
-            val hash = initials.first().toInt()
             backgroundColor = backgroundColors[hash % backgroundColors.size]
             textColor = textColors[hash % textColors.size]
         }
