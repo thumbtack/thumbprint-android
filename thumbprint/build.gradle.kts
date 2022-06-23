@@ -8,7 +8,7 @@ object Versions {
     const val material = "1.2.0"
     const val picasso = "2.8"
     const val robolectric = "4.4"
-    const val thumbprintTokens = "v10.0.0"
+    const val thumbprintTokens = "v12.1.1"
     const val truth = "1.1.3"
 
     object AndroidX {
