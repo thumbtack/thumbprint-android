@@ -8,6 +8,8 @@ import android.graphics.Typeface.BOLD
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.util.AttributeSet
+import androidx.annotation.DimenRes
+import androidx.annotation.DrawableRes
 import androidx.appcompat.view.ContextThemeWrapper
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
@@ -227,5 +229,37 @@ class ThumbprintButton @JvmOverloads constructor(
             PorterDuffColorFilter(loadingAnimationColor, PorterDuff.Mode.SRC_ATOP)
 
         setTextColor(ContextCompat.getColorStateList(context, buttonType.textColorStateListId))
+    }
+
+    /**
+     * Set the drawable to be displayed on the left of the Button title.
+     * The drawable will have the same tint than the button's title.
+     * NOTE: If there's already a drawable assigned to the button via XML, then this method won't
+     * have any effect.
+     */
+    fun setInlineDrawableLeft(
+        @DrawableRes drawableResource: Int?,
+        @DimenRes drawablePadding: Int? = null
+    ) {
+        withDrawableAttributes.apply {
+            fallbackInlineDrawableLeftResId = drawableResource
+            fallbackInlineDrawablePaddingRes = drawablePadding
+        }
+    }
+
+    /**
+     * Set the drawable to be displayed on the right of the Button title.
+     * The drawable will have the same tint than the button's title.
+     * NOTE: If there's already a drawable assigned to the button via XML, then this method won't
+     * have any effect.
+     */
+    fun setInlineDrawableRight(
+        @DrawableRes drawableResource: Int?,
+        @DimenRes drawablePadding: Int? = null
+    ) {
+        withDrawableAttributes.apply {
+            fallbackInlineDrawableRightResId = drawableResource
+            fallbackInlineDrawablePaddingRes = drawablePadding
+        }
     }
 }
