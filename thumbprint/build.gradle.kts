@@ -20,7 +20,7 @@ object Versions {
 }
 
 group = "com.github.thumbtack"
-version = "1.2.8"
+version = "1.2.9"
 
 plugins {
     id("com.android.library")
