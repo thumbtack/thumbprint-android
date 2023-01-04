@@ -8,6 +8,7 @@ import android.graphics.Typeface.BOLD
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.util.AttributeSet
+import android.util.TypedValue
 import androidx.annotation.DimenRes
 import androidx.annotation.DrawableRes
 import androidx.appcompat.view.ContextThemeWrapper
@@ -16,11 +17,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.TextViewCompat
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
-import com.thumbtack.thumbprint.R
-import com.thumbtack.thumbprint.ThumbprintButtonAttributes
-import com.thumbtack.thumbprint.WithDrawablesAttributes
-import com.thumbtack.thumbprint.updateCharSequenceWithInlineDrawablesLimited
-import com.thumbtack.thumbprint.updateTextWithTintedInlineDrawablesLimited
+import com.thumbtack.thumbprint.*
 import com.thumbtack.thumbprint.utilities.getThumbprintFont
 import com.thumbtack.thumbprint.views.button.ThumbprintButton.ThumbprintButtonType
 
@@ -50,7 +47,8 @@ class ThumbprintButton @JvmOverloads constructor(
         SECONDARY(1, R.color.button_secondary_text_color_selector, R.color.tp_blue),
         TERTIARY(2, R.color.button_tertiary_text_color_selector, R.color.tp_black_300),
         CAUTION(3, R.color.button_caution_text_color_selector, R.color.tp_red),
-        SOLID(4, R.color.button_solid_text_color_selector, R.color.tp_black);
+        SOLID(4, R.color.button_solid_text_color_selector, R.color.tp_black),
+        CLEAR(5, R.color.button_clear_text_color_selector, R.color.tp_blue);
     }
 
     private val thumbprintButtonAttributes = ThumbprintButtonAttributes(context, attrs)
@@ -220,6 +218,15 @@ class ThumbprintButton @JvmOverloads constructor(
             } else {
                 R.drawable.button_solid_background
             }
+            ThumbprintButtonType.CLEAR ->
+                with(TypedValue()) {
+                    context.theme.resolveAttribute(
+                        R.attr.selectableItemBackground,
+                        this,
+                        true
+                    )
+                    resourceId
+                }
         }
         setBackgroundResource(backgroundId)
 
