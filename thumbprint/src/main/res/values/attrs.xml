@@ -43,6 +43,7 @@
             <enum name="tertiary" value="2" />
             <enum name="caution" value="3" />
             <enum name="solid" value="4" />
+            <enum name="clear" value="5" />
         </attr>
         <attr name="isLoading" format="boolean" />
         <attr name="isEnabled" format="boolean" />
