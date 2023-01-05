@@ -17,7 +17,11 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.TextViewCompat
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
-import com.thumbtack.thumbprint.*
+import com.thumbtack.thumbprint.R
+import com.thumbtack.thumbprint.ThumbprintButtonAttributes
+import com.thumbtack.thumbprint.WithDrawablesAttributes
+import com.thumbtack.thumbprint.updateCharSequenceWithInlineDrawablesLimited
+import com.thumbtack.thumbprint.updateTextWithTintedInlineDrawablesLimited
 import com.thumbtack.thumbprint.utilities.getThumbprintFont
 import com.thumbtack.thumbprint.views.button.ThumbprintButton.ThumbprintButtonType
 
