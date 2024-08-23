@@ -10,17 +10,15 @@ import androidx.annotation.StyleableRes
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.Transformation
 import com.thumbtack.thumbprint.BlankAvatarDrawable
+import com.thumbtack.thumbprint.CircularImageTransformation
 import com.thumbtack.thumbprint.R
 import kotlinx.android.synthetic.main.avatar_view.view.*
 import java.util.Locale
 
 /**
- * Displays a Thumbprinted avatar image for a user.
- *
- * Avatars may be entities ([isEntity]), i.e. a business rather than an individual, which use a
- * rounded-rectangle shape rather than a circle and a single initial rather than two.
+ * Displays a Thumbprint avatar image for a user.
  */
-abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null, isEntity: Boolean) :
+abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null) :
     RelativeLayout(context, attrs) {
 
     class InvalidSizeException(message: String) : Exception(message)
@@ -71,13 +69,11 @@ abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null, isE
 
         initialsPlaceholder = BlankAvatarDrawable(
             context,
-            isEntity = isEntity,
             initialsFontSize = fontSize
         )
 
         loadingPlaceholder = BlankAvatarDrawable(
             context,
-            isEntity = isEntity,
             initialsFontSize = fontSize
         )
     }
@@ -153,16 +149,29 @@ abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null, isE
     }
 
     /**
-     * Returns the transformation needed for the Image View,
-     * which is either a circular mask for user avatars or a
-     * rounded rectangle mask for entity avatars.
+     * Returns the transformation needed for the Image View
      */
-    abstract fun getTransformation(): Transformation
+    private fun getTransformation(): Transformation {
+        return CircularImageTransformation
+    }
 
     /**
      * Returns the size in pixels of the online badge
      */
-    abstract fun getOnlineBadgeSize(size: Size): Int
+    private fun getOnlineBadgeSize(size: Size): Int {
+        return when (size) {
+            Companion.Size.EXTRA_SMALL -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_extra_small)
+            Companion.Size.SMALL -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_small)
+            Companion.Size.MEDIUM -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_medium)
+            Companion.Size.LARGE -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_large)
+            Companion.Size.EXTRA_LARGE -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_extra_large)
+        }
+    }
 
     /**
      * Returns the X translation, in pixels, that the online badge
@@ -173,7 +182,21 @@ abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null, isE
      * image to not clip children). As a result, the position of badges on Android are
      * different than those on Web/iOS.
      */
-    abstract fun getOnlineBadgeOffsetX(size: Size): Int
+    private fun getOnlineBadgeOffsetX(size: Size): Int {
+        return when (size) {
+            Companion.Size.EXTRA_SMALL -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_offset_x_extra_small)
+            Companion.Size.SMALL -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_offset_x_small)
+            Companion.Size.MEDIUM -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_offset_x_medium)
+            Companion.Size.LARGE -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_offset_x_large)
+            Companion.Size.EXTRA_LARGE -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_offset_x_extra_large)
+        }
+    }
+
 
     /**
      * Returns the Y translation, in pixels, that the online badge
@@ -184,7 +207,20 @@ abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null, isE
      * image to not clip children). As a result, the position of badges on Android are
      * different than those on Web/iOS.
      */
-    abstract fun getOnlineBadgeOffsetY(size: Size): Int
+    private fun getOnlineBadgeOffsetY(size: Size): Int {
+        return when (size) {
+            Companion.Size.EXTRA_SMALL -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_offset_y_extra_small)
+            Companion.Size.SMALL -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_offset_y_small)
+            Companion.Size.MEDIUM -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_offset_y_medium)
+            Companion.Size.LARGE -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_offset_y_large)
+            Companion.Size.EXTRA_LARGE -> resources
+                .getDimensionPixelSize(R.dimen.user_avatar_badge_offset_y_extra_large)
+        }
+    }
 
     companion object {
         private const val DEFAULT_ATTRIBUTE_INDEX = -1

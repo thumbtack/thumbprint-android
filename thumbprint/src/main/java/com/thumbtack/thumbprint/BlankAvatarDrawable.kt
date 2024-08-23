@@ -25,14 +25,9 @@ import kotlin.math.min
  * The background color is determined within this Thumbprint component, based on the ASCII values of
  * the initials' first character; this implementation is shared between Thumbprint platforms (i.e.
  * web and iOS), see [setColorsFromInitials].
- *
- * @param isEntity whether the avatar represents an entity, i.e. a business rather than individual,
- *                 which uses a rounded-rectangle shape rather than circle and a single initial
- *                 rather than two
  */
 internal class BlankAvatarDrawable(
     val context: Context,
-    private val isEntity: Boolean,
     private val initialsFontSize: Int
 ) : Drawable() {
 
@@ -47,8 +42,6 @@ internal class BlankAvatarDrawable(
     private val backgroundColors = context.resources.getIntArray(
         R.array.blank_avatar_background_colors
     )
-    private val roundingRadius = context.resources
-        .getDimensionPixelSize(R.dimen.round_corner_radius).toFloat()
 
     private var backgroundColor: Int = -1
     private var textColor: Int = -1
@@ -80,11 +73,7 @@ internal class BlankAvatarDrawable(
 
     override fun draw(canvas: Canvas) {
         paint.color = backgroundColor
-        if (isEntity) {
-            canvas.drawRoundRect(bounds, roundingRadius, roundingRadius, paint)
-        } else {
-            canvas.drawCircle(centerX, centerY, radius, paint)
-        }
+        canvas.drawCircle(centerX, centerY, radius, paint)
 
         text?.let {
             paint.color = textColor
@@ -105,7 +94,7 @@ internal class BlankAvatarDrawable(
     }
 
     private fun setColorsFromInitials(initials: String?) {
-        val hash = initials?.firstOrNull()?.toInt()
+        val hash = initials?.firstOrNull()?.code
         if (hash == null) {
             backgroundColor = ContextCompat.getColor(context, R.color.tp_gray_200)
             textColor = ContextCompat.getColor(context, R.color.tp_black)
