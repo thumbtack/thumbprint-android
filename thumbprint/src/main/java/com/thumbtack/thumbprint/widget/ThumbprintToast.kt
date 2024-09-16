@@ -40,6 +40,7 @@ class ThumbprintToast {
     private var backgroundColor: Int? = null
     private var actionListener: View.OnClickListener = View.OnClickListener {}
     private var toastLength = Snackbar.LENGTH_SHORT
+    private var maxTextLines = 2
     private var callbackList: MutableList<BaseTransientBottomBar.BaseCallback<Snackbar>> =
         mutableListOf()
 
@@ -119,6 +120,14 @@ class ThumbprintToast {
     }
 
     /**
+     * Sets the [TextView.setMaxLines] of the toast message
+     */
+    fun withMaxLines(maxLines: Int): ThumbprintToast {
+        this.maxTextLines = maxLines
+        return this
+    }
+
+    /**
      * Adds a callback to the toast. This can be called multiple times to add multiple callbacks.
      */
     fun withCallback(callback: BaseTransientBottomBar.BaseCallback<Snackbar>): ThumbprintToast {
@@ -176,9 +185,10 @@ class ThumbprintToast {
             snackbar.setAction(it.toString(context), actionListener)
             val snackbarActionTextView =
                 snackbar.view.findViewById<TextView>(R.id.snackbar_action)
-            snackbarActionTextView?.let {
-                it.isAllCaps = false
-                TextViewCompat.setTextAppearance(it, R.style.Thumbprint_Body2Regular)
+            snackbarActionTextView?.apply {
+                isAllCaps = false
+                maxLines = maxTextLines
+                TextViewCompat.setTextAppearance(this, R.style.Thumbprint_Body2Regular)
             }
             snackbar.setActionTextColor(
                 ContextCompat.getColor(
