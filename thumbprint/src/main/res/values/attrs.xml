@@ -11,6 +11,7 @@
     <!-- These are here to support apps that use Calligraphy. -->
     <attr name="fontPath" format="string" />
     <attr name="regularCalligraphyFont" format="string" />
+    <attr name="mediumCalligraphyFont" format="string" />
     <attr name="boldCalligraphyFont" format="string" />
 
     <declare-styleable name="StarRatingView">
