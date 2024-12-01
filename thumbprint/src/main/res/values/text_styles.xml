@@ -22,12 +22,14 @@
     <style name="Regular" parent="android:TextAppearance">
         <item name="fontFamily">?attr/thumbprintFont</item>
         <item name="fontPath">?attr/regularCalligraphyFont</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
     </style>
 
     <style name="Bold" parent="android:TextAppearance">
         <item name="fontFamily">?attr/thumbprintFont</item>
         <item name="fontWeight">700</item>
         <item name="fontPath">?attr/boldCalligraphyFont</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
     </style>
 
     <!-- BEGIN: Title 5 -->

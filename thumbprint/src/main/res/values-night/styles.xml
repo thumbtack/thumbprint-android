@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ThumbprintDayNightTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/tp_blue</item>
+        <item name="colorAccent">@color/tp_blue</item>
+        <item name="colorPrimaryDark">@color/tp_black</item>
+        <item name="colorSurface">@color/tp_black</item>
+        <item name="colorOnSurface">@color/tp_white</item>
+        <item name="colorSecondary">@color/tp_black_300</item>
+        <item name="colorSecondaryVariant">@color/tp_black_300</item>
+        <item name="colorOnSecondary">@color/tp_white</item>
+        <item name="snackbarStyle">@style/ThumbprintToast</item>
+    </style>
+</resources>
