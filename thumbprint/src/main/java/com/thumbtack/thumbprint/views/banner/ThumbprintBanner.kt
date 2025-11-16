@@ -6,19 +6,24 @@ import android.text.SpannableStringBuilder
 import android.text.method.LinkMovementMethod
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import androidx.annotation.VisibleForTesting
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import com.thumbtack.thumbprint.BoldColoredLinkSpan
 import com.thumbtack.thumbprint.R
+import com.thumbtack.thumbprint.databinding.ThumbprintBannerBinding
 import com.thumbtack.thumbprint.utilities.getThumbprintIcon
 import com.thumbtack.thumbprint.withSpan
-import kotlinx.android.synthetic.main.thumbprint_banner.view.*
 
 class ThumbprintBanner(
     context: Context,
     attrs: AttributeSet? = null
 ) : ConstraintLayout(context, attrs) {
+
+    @VisibleForTesting
+    val binding by lazy { ThumbprintBannerBinding.bind(this) }
+
     private var typedArray: TypedArray = context.theme.obtainStyledAttributes(
         attrs,
         R.styleable.ThumbprintBannerStyleable,
@@ -43,17 +48,17 @@ class ThumbprintBanner(
     var bannerTheme: ThumbprintBannerType = ThumbprintBannerType.INFO
         set(value) {
             field = value
-            bannerBackground.background = ContextCompat.getDrawable(
+            binding.bannerBackground.background = ContextCompat.getDrawable(
                 context,
                 getBackgroundColor(value)
             )
-            bannerIcon.setColorFilter(getTextAndIconColor(value))
+            binding.bannerIcon.setColorFilter(getTextAndIconColor(value))
             buildText(text, linkText)
         }
 
     init {
         LayoutInflater.from(context).inflate(R.layout.thumbprint_banner, this, true)
-        bannerIcon.setImageDrawable(
+        binding.bannerIcon.setImageDrawable(
             getThumbprintIcon(
                 context = context,
                 defaultIcon = ContextCompat.getDrawable(context, R.drawable.default_info),
@@ -61,9 +66,9 @@ class ThumbprintBanner(
             )
         )
 
-        bannerText.movementMethod = LinkMovementMethod()
+        binding.bannerText.movementMethod = LinkMovementMethod()
 
-        ViewCompat.enableAccessibleClickableSpanSupport(bannerText)
+        ViewCompat.enableAccessibleClickableSpanSupport(binding.bannerText)
 
         typedArray.run {
             try {
@@ -112,7 +117,7 @@ class ThumbprintBanner(
     }
 
     private fun buildText(text: CharSequence?, linkText: CharSequence?) {
-        bannerText.setTextColor(getTextAndIconColor(bannerTheme))
+        binding.bannerText.setTextColor(getTextAndIconColor(bannerTheme))
         val stringBuilder = SpannableStringBuilder()
         text?.let {
             stringBuilder.append(it)
@@ -121,7 +126,7 @@ class ThumbprintBanner(
             stringBuilder.append(" ")
             addBoldColoredLinkSpan(context, it, stringBuilder)
         }
-        bannerText.text = stringBuilder
+        binding.bannerText.text = stringBuilder
     }
 
     companion object {

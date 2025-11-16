@@ -5,11 +5,11 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.annotation.LayoutRes
+import androidx.annotation.VisibleForTesting
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.thumbtack.thumbprint.R
+import com.thumbtack.thumbprint.databinding.ThumbprintDropdownBinding
 import com.thumbtack.thumbprint.setVisibleIfTrue
-import kotlinx.android.synthetic.main.thumbprint_dropdown.view.*
-import kotlinx.android.synthetic.main.thumbprint_dropdown.view.errorText as errorTextView
 
 /**
  * [ThumbprintSpinnerInternal] with a helper error text and Thumbprint styling.
@@ -21,10 +21,13 @@ class ThumbprintDropdown(
     attrs: AttributeSet? = null
 ) : ConstraintLayout(context, attrs) {
 
+    @VisibleForTesting
+    val binding by lazy { ThumbprintDropdownBinding.bind(this) }
+
     var hasError: Boolean = false
         set(value) {
             field = value
-            spinner.hasError = value
+            binding.spinner.hasError = value
             updateErrorText()
         }
 
@@ -37,7 +40,7 @@ class ThumbprintDropdown(
     var entries: Array<CharSequence>? = null
         set(value) {
             field = value
-            spinner.entries = value
+            binding.spinner.entries = value
         }
 
     @LayoutRes
@@ -71,13 +74,13 @@ class ThumbprintDropdown(
 
     override fun setEnabled(enabled: Boolean) {
         super.setEnabled(enabled)
-        spinner.isEnabled = enabled
+        binding.spinner.isEnabled = enabled
         updateErrorText()
     }
 
     private fun updateErrorText() {
-        errorTextView.text = errorText
-        errorTextView.setVisibleIfTrue(hasError && isEnabled && errorText?.isNotBlank() == true)
+        binding.errorText.text = errorText
+        binding.errorText.setVisibleIfTrue(hasError && isEnabled && errorText?.isNotBlank() == true)
     }
 
     companion object {

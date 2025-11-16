@@ -6,7 +6,6 @@ import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.graphics.Typeface.BOLD
 import android.graphics.drawable.Drawable
-import android.os.Build
 import android.util.AttributeSet
 import androidx.annotation.DimenRes
 import androidx.annotation.DrawableRes
@@ -65,9 +64,7 @@ class ThumbprintButton @JvmOverloads constructor(
                             postDelayed(
                                 {
                                     if (!isRunning) start()
-                                    if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
-                                        invalidateDrawable(this@apply)
-                                    }
+                                    invalidateDrawable(this@apply)
                                 },
                                 // Delay between each animation cycle. This is a workaround for
                                 // adding an animation startOffset (which doesn't work with an
@@ -136,9 +133,7 @@ class ThumbprintButton @JvmOverloads constructor(
 
         // Note: Need to set these style attributes here because, for some reason, they aren't
         // picked up from the style resource when used with ContextThemeWrapper.
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
-            stateListAnimator = null // Get rid of shadow effects.
-        }
+        stateListAnimator = null  // Get rid of shadow effects.
         TextViewCompat.setTextAppearance(this, R.style.Thumbprint_Title6Bold)
         typeface = getThumbprintFont(context, typeface, BOLD)
 
@@ -161,7 +156,6 @@ class ThumbprintButton @JvmOverloads constructor(
         if (isLoading) {
             loadingAnimationDrawable?.apply {
                 draw(canvas)
-                if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.N) invalidateDrawable(this)
             }
         } else {
             super.onDraw(canvas)

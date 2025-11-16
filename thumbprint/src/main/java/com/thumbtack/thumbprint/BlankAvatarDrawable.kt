@@ -61,7 +61,7 @@ internal class BlankAvatarDrawable(
     private var textY: Float = 0f
     private var radius: Float = 0f
 
-    override fun onBoundsChange(bounds: Rect?) {
+    override fun onBoundsChange(bounds: Rect) {
         super.onBoundsChange(bounds)
         this.bounds = RectF(bounds).also {
             centerX = it.centerX()

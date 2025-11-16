@@ -7,13 +7,9 @@ import org.junit.Test
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
-import org.robolectric.annotation.Config
 import java.util.Date
 import java.util.concurrent.TimeUnit
 
-@Config(
-    packageName = "com.thumbtack.thumbprint"
-)
 @RunWith(RobolectricTestRunner::class)
 class MakeElapsedTimeStringTest {
     /**
