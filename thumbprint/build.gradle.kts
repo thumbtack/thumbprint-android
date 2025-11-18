@@ -7,7 +7,7 @@ object Versions {
     const val junitVintagePlatform = "1.7.0"
     const val material = "1.2.0"
     const val picasso = "2.8"
-    const val robolectric = "4.4"
+    const val robolectric = "4.16"
     const val thumbprintTokens = "v12.2.2"
     const val truth = "1.1.3"
 
@@ -26,7 +26,6 @@ plugins {
     id("com.android.library")
 
     id("kotlin-android")
-    id("kotlin-android-extensions")
 
     id("jacoco")
 
@@ -50,18 +49,16 @@ configurations.all {
 }
 
 android {
+    namespace = "com.thumbtack.thumbprint"
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
-    compileSdkVersion(29)
+    compileSdkVersion(36)
     defaultConfig {
-        minSdkVersion(21)
-        targetSdkVersion(29)
-        versionCode(2)
-        versionName(project.version.toString())
-
+        minSdk = 28
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -96,7 +93,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 
     buildTypes {
@@ -105,10 +102,6 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
     }
-}
-
-androidExtensions {
-    isExperimental = true
 }
 
 extensions.getByType(JacocoPluginExtension::class).toolVersion = Versions.jacoco

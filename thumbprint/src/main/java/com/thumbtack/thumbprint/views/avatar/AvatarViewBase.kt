@@ -12,7 +12,7 @@ import com.squareup.picasso.Transformation
 import com.thumbtack.thumbprint.BlankAvatarDrawable
 import com.thumbtack.thumbprint.CircularImageTransformation
 import com.thumbtack.thumbprint.R
-import kotlinx.android.synthetic.main.avatar_view.view.*
+import com.thumbtack.thumbprint.databinding.AvatarViewBinding
 import java.util.Locale
 
 /**
@@ -22,6 +22,8 @@ abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null) :
     RelativeLayout(context, attrs) {
 
     class InvalidSizeException(message: String) : Exception(message)
+
+    private val binding by lazy { AvatarViewBinding.bind(this) }
 
     private val fontSize: Int
 
@@ -102,10 +104,10 @@ abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null) :
         val imageSize = this.layoutParams.height // Width and height should be equal
 
         if (imageUrl.isNullOrBlank()) {
-            Picasso.get().cancelRequest(avatar)
+            Picasso.get().cancelRequest(binding.avatar)
         }
 
-        initialsPlaceholder.text = initials?.toUpperCase(Locale.ENGLISH)
+        initialsPlaceholder.text = initials?.uppercase(Locale.ENGLISH)
 
         loadingPlaceholder.text = null // Makes a gray placeholder with no text
 
@@ -126,7 +128,7 @@ abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null) :
                 }
             }
             .transform(getTransformation())
-            .into(avatar)
+            .into(binding.avatar)
     }
 
     private fun sizeAndTranslateOnlineBadge(size: Size) {
@@ -136,7 +138,7 @@ abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null) :
         val offsetX = getOnlineBadgeOffsetX(size)
         val offsetY = getOnlineBadgeOffsetY(size)
 
-        badge.apply {
+        binding.badge.apply {
             layoutParams.height = dpValue
             layoutParams.width = dpValue
             translationX = offsetX.toFloat()
@@ -145,7 +147,7 @@ abstract class AvatarViewBase(context: Context, attrs: AttributeSet? = null) :
     }
 
     fun setIsOnline(value: Boolean) {
-        badge.visibility = if (value) View.VISIBLE else View.GONE
+        binding.badge.visibility = if (value) View.VISIBLE else View.GONE
     }
 
     /**

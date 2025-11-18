@@ -4,7 +4,6 @@ import android.widget.Adapter
 import androidx.test.core.app.ApplicationProvider
 import com.thumbtack.thumbprint.MaterialTestApplication
 import com.thumbtack.thumbprint.ViewTreeTestHelper
-import kotlinx.android.synthetic.main.thumbprint_dropdown.view.*
 import org.junit.Test
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.runner.RunWith
@@ -65,7 +64,7 @@ class ThumbprintDropdownTest {
 
         val entries = arrayOf<CharSequence>("entry 1", "entry 2")
         dropdown.entries = entries
-        assertDataMatches(dropdown.spinner.adapter, entries)
+        assertDataMatches(dropdown.binding.spinner.adapter, entries)
 
         val updatedEntries = arrayOf<CharSequence>(
             "updated entry 1",
@@ -73,8 +72,8 @@ class ThumbprintDropdownTest {
             "new entry 3"
         )
         dropdown.entries = updatedEntries
-        dropdown.spinner.performClick()
-        assertDataMatches(dropdown.spinner.adapter, updatedEntries)
+        dropdown.binding.spinner.performClick()
+        assertDataMatches(dropdown.binding.spinner.adapter, updatedEntries)
     }
 
     private fun <T> assertDataMatches(adapter: Adapter, data: Array<T>) {

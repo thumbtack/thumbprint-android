@@ -4,7 +4,6 @@ import android.text.SpannedString
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
 import com.thumbtack.thumbprint.ClickListenerSpan
 import com.thumbtack.thumbprint.MaterialTestApplication
-import kotlinx.android.synthetic.main.thumbprint_banner.view.*
 import org.junit.Test
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.runner.RunWith
@@ -25,10 +24,10 @@ class ThumbprintBannerTest {
             linkClickListener = { linkClicked = true }
         }
         // Simulate clicking on link.
-        SpannedString(bannerView.bannerText.text)
+        SpannedString(bannerView.binding.bannerText.text)
             .getSpans(0, testLinkText.length, ClickListenerSpan::class.java)
             ?.first()
-            ?.onClick(bannerView.bannerText)
+            ?.onClick(bannerView.binding.bannerText)
 
         assertTrue(linkClicked)
     }
