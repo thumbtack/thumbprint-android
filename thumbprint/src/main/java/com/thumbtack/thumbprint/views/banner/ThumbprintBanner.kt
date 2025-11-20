@@ -6,8 +6,8 @@ import android.text.SpannableStringBuilder
 import android.text.method.LinkMovementMethod
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.FrameLayout
 import androidx.annotation.VisibleForTesting
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import com.thumbtack.thumbprint.BoldColoredLinkSpan
@@ -19,7 +19,7 @@ import com.thumbtack.thumbprint.withSpan
 class ThumbprintBanner(
     context: Context,
     attrs: AttributeSet? = null
-) : ConstraintLayout(context, attrs) {
+) : FrameLayout(context, attrs) {
 
     @VisibleForTesting
     val binding by lazy { ThumbprintBannerBinding.bind(this) }
