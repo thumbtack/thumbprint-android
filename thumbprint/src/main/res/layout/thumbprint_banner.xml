@@ -1,38 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/bannerBackground"
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingStart="@dimen/tp_space_3"
-    android:paddingEnd="@dimen/tp_space_3"
-    android:paddingTop="@dimen/tp_space_4"
-    android:paddingBottom="@dimen/tp_space_4"
-    android:background="@color/tp_blue_100"
     tools:ignore="Overdraw">
 
-    <ImageView
-        android:id="@+id/bannerIcon"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/bannerBackground"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:tint="@color/tp_blue_600" />
+        android:background="@color/tp_blue_100"
+        android:paddingStart="@dimen/tp_space_3"
+        android:paddingEnd="@dimen/tp_space_3"
+        android:paddingTop="@dimen/tp_space_4"
+        android:paddingBottom="@dimen/tp_space_4"
+        tools:ignore="Overdraw">
 
-    <TextView
-        android:id="@+id/bannerText"
-        style="@style/Thumbprint.Title7Regular"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/tp_space_3"
-        android:textColor="@color/tp_blue_600"
-        app:layout_constraintStart_toEndOf="@id/bannerIcon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:text="The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog." />
+        <ImageView
+            android:id="@+id/bannerIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tint="@color/tp_blue_600" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/bannerText"
+            style="@style/Thumbprint.Title7Regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tp_space_3"
+            android:textColor="@color/tp_blue_600"
+            app:layout_constraintStart_toEndOf="@id/bannerIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
